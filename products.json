@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Bas",
+    "code": "1",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_een.png",
+    "imgsize": "imgl",
+    "price": "€22,95",
+    "colours": ["blauw", "paars", "rood", "wit"],
+    "maat": "M"
+  },
+  {
+    "name": "Bert",
+    "code": "2",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_twee.png",
+    "imgsize": "imgl",
+    "price": "€22,95",
+    "colours": ["geel", "oranje", "rood", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Arnold",
+    "code": "3",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_drie.png",
+    "imgsize": "imgs",
+    "price": "€22,95",
+    "colours": ["blauw", "rood", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Bianca",
+    "code": "4",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_vier.png",
+    "imgsize": "imgs",
+    "price": "€29,95",
+    "colours": ["blauw", "goud", "paars", "rood", "wit", "zwart"],
+    "maat": "L"
+  },
+  {
+    "name": "Chantal",
+    "code": "5",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_vijf.png",
+    "imgsize": "imgs",
+    "price": "€29,95",
+    "colours": ["blauw", "goud", "roze", "zwart"],
+    "maat": "L"
+  },
+  {
+    "name": "Henk",
+    "code": "6",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_zes.png",
+    "imgsize": "imgm",
+    "price": "€29,95",
+    "colours": ["blauw", "goud", "wit", "zwart"],
+    "maat": "L"
+  },
+  {
+    "name": "Dionne",
+    "code": "7",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_zeven.png",
+    "imgsize": "imgs",
+    "price": "€23,95",
+    "colours": ["blauw", "goud", "rood", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Eduard",
+    "code": "8",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_acht.png",
+    "imgsize": "imgs",
+    "price": "€23,95",
+    "colours": ["blauw", "goud", "wit"],
+    "maat": "M"
+  },
+  {
+    "name": "Bobby",
+    "code": "9",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_negen.png",
+    "imgsize": "imgs",
+    "price": "€28,95",
+    "colours": ["blauw", "goud", "roze"],
+    "maat": "L"
+  },
+  {
+    "name": "Femke",
+    "code": "10",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_tien.png",
+    "imgsize": "imgs",
+    "price": "€22,95",
+    "colours": ["blauw", "rood", "wit"],
+    "maat": "M"
+  },
+  {
+    "name": "Gerard",
+    "code": "11",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_elf.png",
+    "imgsize": "imgm",
+    "price": "€39,99",
+    "colours": ["blauw", "paars", "rood", "wit", "zwart"],
+    "maat": "XL"
+  },
+  {
+    "name": "Helen",
+    "code": "12",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_twaalf.png",
+    "imgsize": "imgs",
+    "price": "€23,95",
+    "colours": ["blauw", "roze", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Iris",
+    "code": "13",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_dertien.png",
+    "imgsize": "imgm",
+    "price": "€20,95",
+    "colours": ["blauw", "wit"],
+    "maat": "M"
+  },
+  {
+    "name": "Jim",
+    "code": "14",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_veertien.png",
+    "imgsize": "imgl",
+    "price": "€29,99",
+    "colours": ["geel", "goud", "rood", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Kevin",
+    "code": "15",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_vijftien.png",
+    "imgsize": "imgl",
+    "price": "€24,95",
+    "colours": ["blauw", "paars", "rood", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Lotte",
+    "code": "16",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_zestien.png",
+    "imgsize": "imgl",
+    "price": "€24,95",
+    "colours": ["blauw", "geel", "groen", "roze", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Max",
+    "code": "17",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_zeventien.png",
+    "imgsize": "imgl",
+    "price": "€29,95",
+    "colours": ["blauw", "wit", "zwart"],
+    "maat": "L"
+  },
+  {
+    "name": "Nico",
+    "code": "18",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_achttien.png",
+    "imgsize": "imgl",
+    "price": "€23,99",
+    "colours": ["goud", "roze", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Sam",
+    "code": "19",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_negentien.png",
+    "imgsize": "imgl",
+    "price": "€23,95",
+    "colours": ["goud", "roze", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Viktor",
+    "code": "20",
+    "category": "Schilderijen",
+    "img": "./assets/schilderijen/schilderij_twintig.png",
+    "imgsize": "imgl",
+    "price": "€23,95",
+    "colours": ["blauw", "goud", "rood", "wit", "zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Kikkerband",
+    "code": "21",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_een.png",
+    "imgsize": "imgl",
+    "price": "€10,95",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Gloeispin",
+    "code": "22",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_twee.png",
+    "imgsize": "imgl",
+    "price": "€10,95",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Bospad",
+    "code": "23",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_drie.png",
+    "imgsize": "imgl",
+    "price": "€10,95",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Fantasie Kasteel",
+    "code": "24",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_vier.png",
+    "imgsize": "imgl",
+    "price": "€12,50",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Vlinder en Olifant",
+    "code": "25",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_vijf.png",
+    "imgsize": "imgl",
+    "price": "€14,99",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Klein Bruggetje",
+    "code": "26",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_zes.png",
+    "imgsize": "imgl",
+    "price": "€12,50",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Gloeispin in web",
+    "code": "27",
+    "category": "Tekeningen",
+    "img": "./assets/schilderijen/tekening_zeven.png",
+    "imgsize": "imgl",
+    "price": "€12,50",
+    "colours": ["zwart"],
+    "maat": "M"
+  },
+  {
+    "name": "Galaxy Doos",
+    "code": "28",
+    "category": "Dozen",
+    "img": "./assets/schilderijen/doos_een.png",
+    "imgsize": "imgm",
+    "price": "€20,50",
+    "colours": ["blauw", "goud", "paars", "roze", "wit", "zwart"],
+    "maat": "L"
+  },
+  {
+    "name": "Kistje met Rood",
+    "code": "29",
+    "category": "Dozen",
+    "img": "./assets/schilderijen/doos_twee.png",
+    "imgsize": "imgs",
+    "price": "€10,50",
+    "colours": ["goud", "rood", "wit"],
+    "maat": "S"
+  },
+  {
+    "name": "Blauw-Goud Kistje",
+    "code": "30",
+    "category": "Dozen",
+    "img": "./assets/schilderijen/doos_drie.png",
+    "imgsize": "imgs",
+    "price": "€10,50",
+    "colours": ["blauw", "goud", "rood"],
+    "maat": "S"
+  },
+  {
+    "name": "Blauw Kistje",
+    "code": "31",
+    "category": "Dozen",
+    "img": "./assets/schilderijen/doos_vier.png",
+    "imgsize": "imgs",
+    "price": "€10,50",
+    "colours": ["blauw"],
+    "maat": "S"
+  },
+  {
+    "name": "Goud Kistje",
+    "code": "32",
+    "category": "Dozen",
+    "img": "./assets/schilderijen/doos_vijf.png",
+    "imgsize": "imgs",
+    "price": "€10,50",
+    "colours": ["blauw", "goud", "rood"],
+    "maat": "S"
+  },
+  {
+    "name": "Plateau",
+    "code": "33",
+    "category": "Accesoires",
+    "img": "./assets/schilderijen/accesoires_een.png",
+    "imgsize": "imgm",
+    "price": "€15,50",
+    "colours": ["blauw", "goud", "zwart"],
+    "maat": ""
+  },
+  {
+    "name": "Onderzetters (4)",
+    "code": "34",
+    "category": "Accesoires",
+    "img": "./assets/schilderijen/accesoires_twee.png",
+    "imgsize": "imgm",
+    "price": "€7,50",
+    "colours": ["blauw", "roze", "zwart"],
+    "maat": ""
+  },
+  {
+    "name": "Plateau",
+    "code": "35",
+    "category": "Accesoires",
+    "img": "./assets/schilderijen/accesoires_drie.png",
+    "imgsize": "imgm",
+    "price": "€15,50",
+    "colours": ["groen", "roze", "zwart"],
+    "maat": ""
+  },
+  {
+    "name": "Klok",
+    "code": "36",
+    "category": "Accesoires",
+    "img": "./assets/schilderijen/accesoires_vier.png",
+    "imgsize": "imgm",
+    "price": "€10,50",
+    "colours": ["goud", "oranje", "roze", "zwart"],
+    "maat": ""
+  },
+  {
+    "name": "Plateau",
+    "code": "37",
+    "category": "Accesoires",
+    "img": "./assets/schilderijen/accesoires_vijf.png",
+    "imgsize": "imgl",
+    "price": "€15,50",
+    "colours": ["blauw", "goud", "paars", "zilver", "zwart"],
+    "maat": ""
+  },
+  {
+    "name": "Witch's Cottage",
+    "code": "38",
+    "category": "Kaarten",
+    "img": "./assets/schilderijen/kaart_een.png",
+    "imgsize": "imgl",
+    "price": "€20,00",
+    "colours": [""],
+    "maat": ""
+  },
+  {
+    "name": "Overrun",
+    "code": "39",
+    "category": "Kaarten",
+    "img": "./assets/schilderijen/kaart_twee.png",
+    "imgsize": "imgl",
+    "price": "€20,00",
+    "colours": [""],
+    "maat": ""
+  },
+  {
+    "name": "Three Visits",
+    "code": "40",
+    "category": "Kaarten",
+    "img": "./assets/schilderijen/kaart_drie.png",
+    "imgsize": "imgl",
+    "price": "€20,00",
+    "colours": [""],
+    "maat": ""
+  },
+  {
+    "name": "Ornithopter",
+    "code": "41",
+    "category": "Kaarten",
+    "img": "./assets/schilderijen/kaart_vier.png",
+    "imgsize": "imgl",
+    "price": "€20,00",
+    "colours": [""],
+    "maat": ""
+  },
+  {
+    "name": "Arcane Signet",
+    "code": "42",
+    "category": "Kaarten",
+    "img": "./assets/schilderijen/kaart_vijf.png",
+    "imgsize": "imgl",
+    "price": "€20,00",
+    "colours": [""],
+    "maat": ""
+  }
+]

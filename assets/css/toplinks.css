@@ -1,0 +1,29 @@
+/*css voor de bovenkant*/
+
+.mainpagelinks {
+  grid-column: 1 / span 5;
+  border-left: 2px solid #076178;
+  border-right: 2px solid #076178;
+  grid-column: 1 / span 5;
+}
+
+.mainpagelinks p {
+  margin-top: 0.5%;
+  margin-left: 1%;
+}
+
+.mainpagelinks a:link {
+  color: black;
+}
+
+.mainpagelinks a:visited {
+  color: black;
+}
+
+.mainpagelinks a:hover {
+  color: #36a0ba;
+}
+
+.mainpagelinks a:active {
+  color: #36a0ba;
+}

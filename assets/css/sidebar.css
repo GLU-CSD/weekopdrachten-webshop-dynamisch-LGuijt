@@ -1,0 +1,69 @@
+/*css voor sidebar*/
+
+/*basis voor sidebar*/
+.sidebar {
+  border-left: 2px solid #076178;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*class voor de filters*/
+.filters {
+  width: 90%;
+  margin-top: 5%;
+  border: 1px solid black;
+  border-top: 15px solid #4f5052;
+  border-radius: 7%;
+  max-height: 190px;
+  overflow: auto;
+}
+
+.filters p {
+  margin: 1%;
+  padding: 1%;
+}
+
+/*customizes de input*/
+input[type="checkbox"] {
+  accent-color: #a4a6aa;
+}
+
+input[type="range"] {
+  accent-color: #a4a6aa;
+  width: 98%;
+}
+
+.pricerange {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*toepassen knop*/
+.toepassen {
+  background-color: #4f5052;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-top: 5%;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.toepassen:hover {
+  background-color: #a4a6aa;
+  color: black;
+}
+
+@media screen and (max-width: 450px) {
+  .sidebar {
+    width: 75%;
+    padding-left: 12.5%;
+  }
+}

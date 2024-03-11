@@ -1,0 +1,157 @@
+/*css voor de header*/
+
+/*basis voor de navigatiebalk*/
+#navbalk {
+  background-color: #4f5052;
+  grid-row: 1;
+  position: sticky;
+  top: 0.1px;
+  display: grid;
+  grid-template-columns: 75px auto auto;
+  grid-template-rows: 75px auto auto;
+  color: white;
+  opacity: 0.95;
+  border-style: groove;
+  border-color: #36a0ba;
+}
+
+/*voor het logo*/
+#logo {
+  grid-column: 1;
+  grid-row: 1;
+  height: 60px;
+  width: 60px;
+}
+
+#logoimg {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+
+/*voor de navigatielinks*/
+#navlinks {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 80px;
+}
+
+.navlinks .categories {
+  display: none;
+}
+
+/*voor de links naar inloggen favorieten winkelwagen*/
+.homelinks {
+  grid-column: 3;
+  grid-row: 1;
+  padding: 1%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*voor de plaatjes van de linkjes*/
+.homelinks .icon {
+  display: none;
+  height: 70px;
+  width: 70px;
+  border: none;
+  background-color: #4f5052;
+  padding: 0px;
+}
+
+.homelinks .icon img {
+  height: 65%;
+  width: 65%;
+  margin: auto;
+}
+
+/*algemeen linkjes in de navigatie balk*/
+.links {
+  background-color: #4f5052;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  text-decoration: none;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.links:hover {
+  background-color: #a4a6aa;
+  color: black;
+}
+
+/*voor de search field, en regelt de animatie als je er op klikt*/
+.navlinks input[type="text"] {
+  width: 50px;
+  border: none;
+  background-image: url(../iconen/search.png);
+  background-color: #4f5052;
+  background-position: 15px 9px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  color: white;
+  transition: width 1s ease-in-out;
+}
+
+.navlinks input[type="text"]:focus {
+  width: 100%;
+}
+
+#burgernav{
+  z-index: 5;
+  width: 90%;
+  left: 100vw;
+  position: fixed;
+  background-color: #4f5052;
+  font-size: 16px;
+  top: 80px;
+  transition-duration: .5s;
+  transition-timing-function: ease-out;
+}
+
+.burgerlinks{
+  color: white;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  height: 70px;
+  text-decoration: none;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/*responsiveness*/
+
+/*verwijderd de originele linkjes*/
+@media screen and (max-width: 992px) {
+  .homelinks .links {
+    display: none;
+  }
+
+  .homelinks .icon {
+    grid-row: 1;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-start;
+  }
+
+  .navlinks .links {
+    display: none;
+  }
+}
+
+
