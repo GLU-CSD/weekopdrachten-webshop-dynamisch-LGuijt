@@ -6,11 +6,11 @@
   <form action="" method="get" class="sidebar">
     <div class="filters"> <!--filters voor de maat, je kan er op klikken verder niet functioneel-->
       <p style="border-bottom: 1px solid black; font-size: 18px;">Maat</p>
-      <p><input type="checkbox" name="maat" value="maatxs">XS</p>
-      <p><input type="checkbox" name="maat" value="maats">S</p>
-      <p><input type="checkbox" name="maat" value="maatm">M</p>
-      <p><input type="checkbox" name="maat" value="maatl">L</p>
-      <p><input type="checkbox" name="maat" value="maatxl">XL</p>
+      <p><input type="checkbox" name="maat[]" value="XS">XS</p>
+      <p><input type="checkbox" name="maat[]" value="S">S</p>
+      <p><input type="checkbox" name="maat[]" value="M">M</p>
+      <p><input type="checkbox" name="maat[]" value="L">L</p>
+      <p><input type="checkbox" name="maat[]" value="XL">XL</p>
     </div>
 
     <div class="filters"> <!--filters voor de kleur, je kan er op klikken verder niet functioneel-->
@@ -80,7 +80,7 @@
             echo '<div class="product">';
             echo '<div class="pic"><img class="' . $x["imgsize"] . '" src="' . $x["img"] . '" alt="schilderij"></div>';
             echo '<div class="productname">' . $x["name"] . '</div>';
-            echo '<div class="productprijs">' . $x["price"] . '</div>';
+            echo '<div class="productprijs">€' . $x["price"] . '</div>';
             echo '<div class="productkleuren">';
             foreach ($x["colours"] as $y) {
               echo '<div class=' . $y . '></div>';
@@ -95,22 +95,56 @@
           }
         }
 
+        if ($productamount == 0) {
+          echo 'Geen producten gevonden.';
+        }
+
         function filefilter($prod)
         {
           if ($_SERVER["REQUEST_METHOD"] == "GET") {
             $colorCheck = false;
+            $maatCheck = false;
+            $minCheck = false;
+            $maxCheck = false;
+
             if (isset($_GET['kleur'])) {
               $klr = $_GET['kleur'];
-              if (empty($klr)) {
-                $colorCheck = true;
-              } else {
-                $colorCheck = false;
+              foreach ($klr as $z) {
+                foreach ($prod["colours"] as $a) {
+                  if ($z === $a) {
+                    $colorCheck = true;
+                  }
+                }
               }
             } else {
               $colorCheck = true;
             }
 
-            if ($colorCheck){
+            if (isset($_GET['maat'])) {
+              $mt = $_GET['maat'];
+              foreach ($mt as $b) {
+                if ($prod["maat"] === $b) {
+                  $maatCheck = true;
+                }
+              }
+
+            } else {
+              $maatCheck = true;
+            }
+
+            if ($_GET['minprice'] <= $prod['price']){
+              $minCheck = true;
+            } else {
+              $minCheck = false;
+            }
+
+            if ($_GET['maxprice'] >= $prod['price']){
+              $maxCheck = true;
+            } else {
+              $maxCheck = false;
+            }
+
+            if ($colorCheck && $maatCheck && $minCheck && $maxCheck) {
               return true;
             } else {
               return false;

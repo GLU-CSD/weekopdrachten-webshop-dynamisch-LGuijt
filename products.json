@@ -5,7 +5,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_een.png",
     "imgsize": "imgl",
-    "price": "€22,95",
+    "price": "22.95",
     "colours": ["blauw", "paars", "rood", "wit"],
     "maat": "M"
   },
@@ -15,7 +15,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_twee.png",
     "imgsize": "imgl",
-    "price": "€22,95",
+    "price": "22.95",
     "colours": ["geel", "oranje", "rood", "wit", "zwart"],
     "maat": "M"
   },
@@ -25,7 +25,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_drie.png",
     "imgsize": "imgs",
-    "price": "€22,95",
+    "price": "22.95",
     "colours": ["blauw", "rood", "zwart"],
     "maat": "M"
   },
@@ -35,7 +35,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_vier.png",
     "imgsize": "imgs",
-    "price": "€29,95",
+    "price": "29.95",
     "colours": ["blauw", "goud", "paars", "rood", "wit", "zwart"],
     "maat": "L"
   },
@@ -45,7 +45,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_vijf.png",
     "imgsize": "imgs",
-    "price": "€29,95",
+    "price": "29.95",
     "colours": ["blauw", "goud", "roze", "zwart"],
     "maat": "L"
   },
@@ -55,7 +55,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_zes.png",
     "imgsize": "imgm",
-    "price": "€29,95",
+    "price": "29.95",
     "colours": ["blauw", "goud", "wit", "zwart"],
     "maat": "L"
   },
@@ -65,7 +65,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_zeven.png",
     "imgsize": "imgs",
-    "price": "€23,95",
+    "price": "23.95",
     "colours": ["blauw", "goud", "rood", "wit", "zwart"],
     "maat": "M"
   },
@@ -75,7 +75,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_acht.png",
     "imgsize": "imgs",
-    "price": "€23,95",
+    "price": "23.95",
     "colours": ["blauw", "goud", "wit"],
     "maat": "M"
   },
@@ -85,7 +85,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_negen.png",
     "imgsize": "imgs",
-    "price": "€28,95",
+    "price": "28.95",
     "colours": ["blauw", "goud", "roze"],
     "maat": "L"
   },
@@ -95,7 +95,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_tien.png",
     "imgsize": "imgs",
-    "price": "€22,95",
+    "price": "22.95",
     "colours": ["blauw", "rood", "wit"],
     "maat": "M"
   },
@@ -105,7 +105,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_elf.png",
     "imgsize": "imgm",
-    "price": "€39,99",
+    "price": "39.99",
     "colours": ["blauw", "paars", "rood", "wit", "zwart"],
     "maat": "XL"
   },
@@ -115,7 +115,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_twaalf.png",
     "imgsize": "imgs",
-    "price": "€23,95",
+    "price": "23.95",
     "colours": ["blauw", "roze", "wit", "zwart"],
     "maat": "M"
   },
@@ -125,7 +125,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_dertien.png",
     "imgsize": "imgm",
-    "price": "€20,95",
+    "price": "20.95",
     "colours": ["blauw", "wit"],
     "maat": "M"
   },
@@ -135,7 +135,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_veertien.png",
     "imgsize": "imgl",
-    "price": "€29,99",
+    "price": "29.99",
     "colours": ["geel", "goud", "rood", "zwart"],
     "maat": "M"
   },
@@ -145,7 +145,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_vijftien.png",
     "imgsize": "imgl",
-    "price": "€24,95",
+    "price": "24.95",
     "colours": ["blauw", "paars", "rood", "wit", "zwart"],
     "maat": "M"
   },
@@ -155,7 +155,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_zestien.png",
     "imgsize": "imgl",
-    "price": "€24,95",
+    "price": "24.95",
     "colours": ["blauw", "geel", "groen", "roze", "zwart"],
     "maat": "M"
   },
@@ -165,7 +165,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_zeventien.png",
     "imgsize": "imgl",
-    "price": "€29,95",
+    "price": "29.95",
     "colours": ["blauw", "wit", "zwart"],
     "maat": "L"
   },
@@ -175,7 +175,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_achttien.png",
     "imgsize": "imgl",
-    "price": "€23,99",
+    "price": "23.99",
     "colours": ["goud", "roze", "wit", "zwart"],
     "maat": "M"
   },
@@ -185,7 +185,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_negentien.png",
     "imgsize": "imgl",
-    "price": "€23,95",
+    "price": "23.95",
     "colours": ["goud", "roze", "wit", "zwart"],
     "maat": "M"
   },
@@ -195,7 +195,7 @@
     "category": "Schilderijen",
     "img": "./assets/schilderijen/schilderij_twintig.png",
     "imgsize": "imgl",
-    "price": "€23,95",
+    "price": "23.95",
     "colours": ["blauw", "goud", "rood", "wit", "zwart"],
     "maat": "M"
   },
@@ -205,7 +205,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_een.png",
     "imgsize": "imgl",
-    "price": "€10,95",
+    "price": "10.95",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -215,7 +215,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_twee.png",
     "imgsize": "imgl",
-    "price": "€10,95",
+    "price": "10.95",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -225,7 +225,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_drie.png",
     "imgsize": "imgl",
-    "price": "€10,95",
+    "price": "10.95",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -235,7 +235,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_vier.png",
     "imgsize": "imgl",
-    "price": "€12,50",
+    "price": "12.50",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -245,7 +245,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_vijf.png",
     "imgsize": "imgl",
-    "price": "€14,99",
+    "price": "14.99",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -255,7 +255,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_zes.png",
     "imgsize": "imgl",
-    "price": "€12,50",
+    "price": "12.50",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -265,7 +265,7 @@
     "category": "Tekeningen",
     "img": "./assets/schilderijen/tekening_zeven.png",
     "imgsize": "imgl",
-    "price": "€12,50",
+    "price": "12.50",
     "colours": ["zwart"],
     "maat": "M"
   },
@@ -275,7 +275,7 @@
     "category": "Dozen",
     "img": "./assets/schilderijen/doos_een.png",
     "imgsize": "imgm",
-    "price": "€20,50",
+    "price": "20.50",
     "colours": ["blauw", "goud", "paars", "roze", "wit", "zwart"],
     "maat": "L"
   },
@@ -285,7 +285,7 @@
     "category": "Dozen",
     "img": "./assets/schilderijen/doos_twee.png",
     "imgsize": "imgs",
-    "price": "€10,50",
+    "price": "10.50",
     "colours": ["goud", "rood", "wit"],
     "maat": "S"
   },
@@ -295,7 +295,7 @@
     "category": "Dozen",
     "img": "./assets/schilderijen/doos_drie.png",
     "imgsize": "imgs",
-    "price": "€10,50",
+    "price": "10.50",
     "colours": ["blauw", "goud", "rood"],
     "maat": "S"
   },
@@ -305,7 +305,7 @@
     "category": "Dozen",
     "img": "./assets/schilderijen/doos_vier.png",
     "imgsize": "imgs",
-    "price": "€10,50",
+    "price": "10.50",
     "colours": ["blauw"],
     "maat": "S"
   },
@@ -315,7 +315,7 @@
     "category": "Dozen",
     "img": "./assets/schilderijen/doos_vijf.png",
     "imgsize": "imgs",
-    "price": "€10,50",
+    "price": "10.50",
     "colours": ["blauw", "goud", "rood"],
     "maat": "S"
   },
@@ -325,7 +325,7 @@
     "category": "Accesoires",
     "img": "./assets/schilderijen/accesoires_een.png",
     "imgsize": "imgm",
-    "price": "€15,50",
+    "price": "15.50",
     "colours": ["blauw", "goud", "zwart"],
     "maat": ""
   },
@@ -335,7 +335,7 @@
     "category": "Accesoires",
     "img": "./assets/schilderijen/accesoires_twee.png",
     "imgsize": "imgm",
-    "price": "€7,50",
+    "price": "7,.0",
     "colours": ["blauw", "roze", "zwart"],
     "maat": ""
   },
@@ -345,7 +345,7 @@
     "category": "Accesoires",
     "img": "./assets/schilderijen/accesoires_drie.png",
     "imgsize": "imgm",
-    "price": "€15,50",
+    "price": "15.50",
     "colours": ["groen", "roze", "zwart"],
     "maat": ""
   },
@@ -355,7 +355,7 @@
     "category": "Accesoires",
     "img": "./assets/schilderijen/accesoires_vier.png",
     "imgsize": "imgm",
-    "price": "€10,50",
+    "price": "10.50",
     "colours": ["goud", "oranje", "roze", "zwart"],
     "maat": ""
   },
@@ -365,7 +365,7 @@
     "category": "Accesoires",
     "img": "./assets/schilderijen/accesoires_vijf.png",
     "imgsize": "imgl",
-    "price": "€15,50",
+    "price": "15.50",
     "colours": ["blauw", "goud", "paars", "zilver", "zwart"],
     "maat": ""
   },
@@ -375,7 +375,7 @@
     "category": "Kaarten",
     "img": "./assets/schilderijen/kaart_een.png",
     "imgsize": "imgl",
-    "price": "€20,00",
+    "price": "20.00",
     "colours": [""],
     "maat": ""
   },
@@ -385,7 +385,7 @@
     "category": "Kaarten",
     "img": "./assets/schilderijen/kaart_twee.png",
     "imgsize": "imgl",
-    "price": "€20,00",
+    "price": "20.00",
     "colours": [""],
     "maat": ""
   },
@@ -395,7 +395,7 @@
     "category": "Kaarten",
     "img": "./assets/schilderijen/kaart_drie.png",
     "imgsize": "imgl",
-    "price": "€20,00",
+    "price": "20.00",
     "colours": [""],
     "maat": ""
   },
@@ -405,7 +405,7 @@
     "category": "Kaarten",
     "img": "./assets/schilderijen/kaart_vier.png",
     "imgsize": "imgl",
-    "price": "€20,00",
+    "price": "20.00",
     "colours": [""],
     "maat": ""
   },
@@ -415,7 +415,7 @@
     "category": "Kaarten",
     "img": "./assets/schilderijen/kaart_vijf.png",
     "imgsize": "imgl",
-    "price": "€20,00",
+    "price": "20.00",
     "colours": [""],
     "maat": ""
   }
