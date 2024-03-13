@@ -3,26 +3,26 @@
     <div class="mainpagelinks">
         <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Accesoires</p>
     </div>
-    <div class="sidebar">
+    <form action="" method="get" class="sidebar">
         <div class="filters"> <!--filters voor de kleur, je kan er op klikken verder niet functioneel-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Kleur</p>
-            <p><input type="checkbox" name="kleur" value="blauw">Blauw</p>
-            <p><input type="checkbox" name="kleur" value="geel">Geel</p>
-            <p><input type="checkbox" name="kleur" value="goud">Goud</p>
-            <p><input type="checkbox" name="kleur" value="groen">Groen</p>
-            <p><input type="checkbox" name="kleur" value="oranje">Oranje</p>
-            <p><input type="checkbox" name="kleur" value="paars">Paars</p>
-            <p><input type="checkbox" name="kleur" value="rood">Rood</p>
-            <p><input type="checkbox" name="kleur" value="roze">Roze</p>
-            <p><input type="checkbox" name="kleur" value="wit">Wit</p>
-            <p><input type="checkbox" name="kleur" value="zilver">Zilver</p>
-            <p><input type="checkbox" name="kleur" value="zwart">Zwart</p>
+            <p><input type="checkbox" name="kleur[]" value="blauw">Blauw</p>
+            <p><input type="checkbox" name="kleur[]" value="geel">Geel</p>
+            <p><input type="checkbox" name="kleur[]" value="goud">Goud</p>
+            <p><input type="checkbox" name="kleur[]" value="groen">Groen</p>
+            <p><input type="checkbox" name="kleur[]" value="oranje">Oranje</p>
+            <p><input type="checkbox" name="kleur[]" value="paars">Paars</p>
+            <p><input type="checkbox" name="kleur[]" value="rood">Rood</p>
+            <p><input type="checkbox" name="kleur[]" value="roze">Roze</p>
+            <p><input type="checkbox" name="kleur[]" value="wit">Wit</p>
+            <p><input type="checkbox" name="kleur[]" value="zilver">Zilver</p>
+            <p><input type="checkbox" name="kleur[]" value="zwart">Zwart</p>
         </div>
         <div class="filters"> <!--filters voor de kleur, je kan er op klikken verder niet functioneel-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Type</p>
-            <p><input type="checkbox" name="type" value="plateau">Plateau</p>
-            <p><input type="checkbox" name="type" value="onderzetter">Onderzetter</p>
-            <p><input type="checkbox" name="type" value="klok">Klok</p>
+            <p><input type="checkbox" name="type[]" value="plateau">Plateau</p>
+            <p><input type="checkbox" name="type[]" value="onderzetter">Onderzetter</p>
+            <p><input type="checkbox" name="type[]" value="klok">Klok</p>
         </div>
         <div class="filters"><!--prijs sliders-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Prijs</p>
@@ -45,8 +45,8 @@
                 <input type="range" min="0" max="100" name="maxprice" id="maxprice" value="100">
             </div>
         </div>
-        <button class="toepassen">Toepassen</button> <!--knop voor de filters toepassen. klikbaar-->
-    </div>
+        <input type="submit" class="toepassen"> <!--knop voor de filters toepassen. klikbaar-->
+    </form>
     <div id="products">
         <div id="producttop"><!--titel van de pagina, en de knop voor het sorteren-->
             <div id="title">
@@ -64,31 +64,7 @@
         <div id="productlist">
             <div class="productdescription">verschillende soorten accesoires versierd met acryl fluid art</div>
             <div id="allproducts">
-                <?php
-                $productamount = 0;
-                $file_json = file_get_contents("../products.json");
-                $file = json_decode($file_json, true);
-
-                foreach ($file as $x) {
-                    if ($x["category"] == "Accesoires") {
-                        echo '<div class="product">';
-                        echo '<div class="pic"><img class="' . $x["imgsize"] . '" src="' . $x["img"] . '" alt="schilderij"></div>';
-                        echo '<div class="productname">' . $x["name"] . '</div>';
-                        echo '<div class="productprijs">' . $x["price"] . '</div>';
-                        echo '<div class="productkleuren">';
-                        foreach ($x["colours"] as $y) {
-                            echo '<div class=' . $y . '></div>';
-                        }
-                        echo '</div>';
-                        echo '<div class="productmaat">' . $x["maat"] . '</div>';
-                        echo '<div class="bestelknop">';
-                        echo '<button onclick="cartCounter()">Bestel</button>';
-                        echo '</div>';
-                        echo '</div>';
-                        $productamount++;
-                    }
-                }
-                ?>
+                <?php include 'accesoirespl.php' ?>
             </div>
             <div class="productamount">
                 <?php echo $productamount; ?> artikelen
