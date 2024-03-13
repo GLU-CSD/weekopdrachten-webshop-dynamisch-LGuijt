@@ -1,1 +1,3 @@
-<?php include "./php/homepage.php"; ?>
+<script>
+location.replace("/php/homepage.php");
+</script>

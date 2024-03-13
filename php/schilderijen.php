@@ -1,7 +1,7 @@
 <?php include './header.php' ?>
 <div class="mainpage"> <!--pagina zonder de navigatie balk en de footer -->
   <div class="mainpagelinks"><!--links boven de producten-->
-    <p><a href="/homepage.php">Home</a> > <a href="/index.php">Shop</a> > Schilderijen</p>
+    <p><a href="homepage.php">Home</a> > <a href="/index.php">Shop</a> > Schilderijen</p>
   </div>
   <form action="" method="get" class="sidebar">
     <div class="filters"> <!--filters voor de maat, je kan er op klikken verder niet functioneel-->

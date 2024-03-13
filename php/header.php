@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../assets/css/mainpage.css">
   <link rel="stylesheet" href="../assets/css/toplinks.css">
   <link rel="stylesheet" href="../assets/css/sidebar.css">
-  <link rel="stylesheet" href="../assets/css/colors.css">
+  <link rel="stylesheet" href="./assets/css/colors.css">
   <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="../assets/css/bestel.css">
   <link rel="stylesheet" href="../assets/css/homepage.css">
