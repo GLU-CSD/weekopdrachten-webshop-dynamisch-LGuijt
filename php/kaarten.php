@@ -1,31 +1,9 @@
-<?php include 'header.php' ?>
+<?php include './header.php' ?>
 <div class="mainpage">
     <div class="mainpagelinks">
-        <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Dozen</p>
+        <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Kaarten</p>
     </div>
     <div class="sidebar">
-        <div class="filters"> <!--filters voor de maat, je kan er op klikken verder niet functioneel-->
-            <p style="border-bottom: 1px solid black; font-size: 18px;">Maat</p>
-            <p><input type="checkbox" name="maat" value="maatxs">XS</p>
-            <p><input type="checkbox" name="maat" value="maats">S</p>
-            <p><input type="checkbox" name="maat" value="maatm">M</p>
-            <p><input type="checkbox" name="maat" value="maatl">L</p>
-            <p><input type="checkbox" name="maat" value="maatxl">XL</p>
-        </div>
-        <div class="filters"> <!--filters voor de kleur, je kan er op klikken verder niet functioneel-->
-            <p style="border-bottom: 1px solid black; font-size: 18px;">Kleur</p>
-            <p><input type="checkbox" name="kleur" value="blauw">Blauw</p>
-            <p><input type="checkbox" name="kleur" value="geel">Geel</p>
-            <p><input type="checkbox" name="kleur" value="goud">Goud</p>
-            <p><input type="checkbox" name="kleur" value="groen">Groen</p>
-            <p><input type="checkbox" name="kleur" value="oranje">Oranje</p>
-            <p><input type="checkbox" name="kleur" value="paars">Paars</p>
-            <p><input type="checkbox" name="kleur" value="rood">Rood</p>
-            <p><input type="checkbox" name="kleur" value="roze">Roze</p>
-            <p><input type="checkbox" name="kleur" value="wit">Wit</p>
-            <p><input type="checkbox" name="kleur" value="zilver">Zilver</p>
-            <p><input type="checkbox" name="kleur" value="zwart">Zwart</p>
-        </div>
         <div class="filters"><!--prijs sliders-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Prijs</p>
             <p>Min. Prijs:</p>
@@ -52,7 +30,7 @@
     <div id="products">
         <div id="producttop"><!--titel van de pagina, en de knop voor het sorteren-->
             <div id="title">
-                <p>Dozen</p>
+                <p>Kaarten</p>
             </div>
             <div id="productsort">
                 <select name="sorteren">
@@ -64,15 +42,15 @@
             </div>
         </div>
         <div id="productlist">
-            <div class="productdescription">dozen en kisten versierd met acryl fluid art</div>
+            <div class="productdescription">bijgewerkte magic the gathering kaartjes</div>
             <div id="allproducts">
                 <?php
                 $productamount = 0;
-                $file_json = file_get_contents("./products.json");
+                $file_json = file_get_contents("../products.json");
                 $file = json_decode($file_json, true);
 
                 foreach ($file as $x) {
-                    if ($x["category"] == "Dozen") {
+                    if ($x["category"] == "Kaarten") {
                         echo '<div class="product">';
                         echo '<div class="pic"><img class="' . $x["imgsize"] . '" src="' . $x["img"] . '" alt="schilderij"></div>';
                         echo '<div class="productname">' . $x["name"] . '</div>';
@@ -98,4 +76,4 @@
         </div>
     </div>
 </div>
-<?php include 'footer.php' ?>
+<?php include './footer.php' ?>

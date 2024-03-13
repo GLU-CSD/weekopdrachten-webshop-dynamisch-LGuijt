@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include './header.php' ?>
 <div class="mainpage">
     <div class="mainpagelinks">
         <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> >Tekeningen</p>
@@ -46,7 +46,7 @@
             <div id="allproducts">
                 <?php
                 $productamount = 0;
-                $file_json = file_get_contents("./products.json");
+                $file_json = file_get_contents("../products.json");
                 $file = json_decode($file_json, true);
 
                 foreach ($file as $x) {
@@ -76,4 +76,4 @@
         </div>
     </div>
 </div>
-<?php include 'footer.php' ?>
+<?php include './footer.php' ?>

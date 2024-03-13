@@ -33,10 +33,10 @@
 
 </div>
 <!--links voor javascript-->
-<script src="assets/js/app.js"></script>
-<script src="assets/js/slider.js"></script>
-<script src="assets/js/winkelwagen.js"></script>
-<script src="assets/js/pingpong.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/slider.js"></script>
+<script src="../assets/js/winkelwagen.js"></script>
+<script src="../assets/js/pingpong.js"></script>
 </body>
 
 </html>

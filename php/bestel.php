@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include './header.php' ?>
 <div class="mainpage">
     <?php
     $aanhef = $vnaam = $tnaam = $anaam = $postcode = $strtnaam = $huisnummer = $numtoev = $email = $phone = $geboortedatum = $voorwaarde = "";
@@ -175,5 +175,5 @@
         </div>
     </form>
 </div>
-<script src="assets/js/validate.js"></script>
-<?php include 'footer.php' ?>
+<script src="../assets/js/validate.js"></script>
+<?php include './footer.php' ?>
