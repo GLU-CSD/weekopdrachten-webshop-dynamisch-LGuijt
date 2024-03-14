@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="../assets/css/mainpage.css">
   <link rel="stylesheet" href="../assets/css/toplinks.css">
   <link rel="stylesheet" href="../assets/css/sidebar.css">
-  <link rel="stylesheet" href="./assets/css/colors.css">
+  <link rel="stylesheet" href="../assets/css/colors.css">
   <link rel="stylesheet" href="../assets/css/footer.css">
   <link rel="stylesheet" href="../assets/css/bestel.css">
   <link rel="stylesheet" href="../assets/css/homepage.css">
+  <link rel="stylesheet" href="../assets/css/detailpag.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icono/1.3.0/icono.min.css">
 
   <meta name="description" content="">

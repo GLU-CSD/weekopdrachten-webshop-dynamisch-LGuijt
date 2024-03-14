@@ -111,8 +111,9 @@
 
 #burgernav{
   z-index: 5;
-  width: 90%;
+  width: 120%;
   left: 100vw;
+  height: 100%;
   position: fixed;
   background-color: #4f5052;
   font-size: 16px;
