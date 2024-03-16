@@ -64,7 +64,7 @@
         <a class="burgerlinks" href="./accesoires.php" target="_self">Accessoires</a>
         <a class="burgerlinks" href="https://www.instagram.com/fruit.fish7980/" target="_blank">Inloggen &nbsp;<img
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
-        <a class="burgerlinks" href="https://www.instagram.com/fruit.fish7980/" target="_blank">Favorieten &nbsp;<img
+        <a class="burgerlinks" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
         <a class="burgerlinks" href="./bestel.php" target="_blank">Winkelwagen&nbsp;<img
             src="../assets/iconen/cart.png" alt="winkelwagen"></a>
