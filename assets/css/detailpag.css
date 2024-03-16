@@ -39,10 +39,6 @@
     overflow: hidden;
 }
 
-.s {
-    border: 1px solid hotpink;
-}
-
 .detailpicsmall{
     display: grid;
     border: .5px solid #a4a6aa;

@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo '</div>';
             echo '<div id="detailtext">';
             echo '<div id="detailprice">€' . $x["price"] . '</div>';
-            echo '<button id="addcart">Voeg toe aan winkelwagen</button>';
+            echo '<button id="addcart" onclick="myFunction()" >Voeg toe aan winkelwagen</button>';
             echo '<button id="addfave">Voeg toe aan favorieten</button>';
             echo '<ul id="detailinfo">';
             foreach($x["detailinfo"] as $y){
@@ -37,4 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     }
 }
 ?>
+<script>
+
+function myFunction(){
+    document.location = './homepage.php';
+}
+
+</script>
 <?php include './footer.php' ?>
