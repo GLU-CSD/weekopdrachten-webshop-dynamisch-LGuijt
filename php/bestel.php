@@ -133,7 +133,7 @@
                 <?php echo $huisnummererr; ?>
             </span>
             <input type="text" name="numtoev" placeholder="Toevoeging">
-            <span class="error" id="strterror"><span>
+            <span class="error" id="strterror"></span>
         </p>
         <p><span style="margin-right: 107px;">Land:</span>
             <select name="landen">
@@ -156,7 +156,7 @@
             </span>
         </p>
         <p><span style="margin-right: 18px;">Geboortedatum:</span>
-            <input type="date" name="geboortedatum" required placeholder="MM/DD/YYYY" onblur="checkField(this)">
+            <input type="date" name="geboortedatum" required onblur="checkField(this)">
             <span class="error" id="geberror">*
                 <?php echo $geboortedatumerr; ?>
             </span>

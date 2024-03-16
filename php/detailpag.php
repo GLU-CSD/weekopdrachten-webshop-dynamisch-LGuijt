@@ -17,10 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             echo '<div id="detailpage">';
             echo '<div id="detailtitle">' . $x["category"] . ' - ' . $title . '</div>';
             echo '<div id="detailpiccon">';
-            echo '<div id="detailpicbig"><img class="detimg" id="bigpic" src="' . $x["img"] . '"></div>';
-            echo '<div class="detailpicsmall"><img class="s detimg" id="one" src="' . $x["img"] . '"></div>';
-            echo '<div class="detailpicsmall"><img class="s detimg" id="two" src="' . $x["imgtwo"] . '"></div>';
-            echo '<div class="detailpicsmall"><img class="s detimg" id="three" src="' . $x["imgthree"] . '"></div>';
+            echo '<div id="detailpicbig"><img class="detimg" id="bigpic" src="' . $x["img"] . '" alt="big picture"></div>';
+            echo '<div class="detailpicsmall"><img class="s detimg" id="one" src="' . $x["img"] . '" alt="small picture"></div>';
+            echo '<div class="detailpicsmall"><img class="s detimg" id="two" src="' . $x["imgtwo"] . '" alt="small picture"></div>';
+            echo '<div class="detailpicsmall"><img class="s detimg" id="three" src="' . $x["imgthree"] . '" alt="small picture"></div>';
             echo '</div>';
             echo '<div id="detailtext">';
             echo '<div id="detailprice">€' . $x["price"] . '</div>';
