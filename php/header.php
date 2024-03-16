@@ -1,3 +1,7 @@
+<?php
+//session_start();
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -49,7 +53,7 @@
       <div class="homelinks" id="homelinks"> <!--laatste paar navigatiebalk links-->
         <a class="links" href="https://www.instagram.com/fruit.fish7980/" target="_blank">Inloggen &nbsp;<img
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
-        <a class="links" href="https://www.instagram.com/fruit.fish7980/" target="_blank">Favorieten &nbsp;<img
+        <a class="links" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
         <a class="links" href="./bestel.php" target="_blank">Winkelwagen(<span id="inwagen"></span>) &nbsp;<img
             src="../assets/iconen/cart.png" alt="winkelwagen"></a>
