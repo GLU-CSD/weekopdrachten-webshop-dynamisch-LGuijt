@@ -18,7 +18,7 @@ foreach ($file as $x) {
         echo '</div>';
         echo '<div class="productmaat">' . $x["maat"] . '</div>';
         echo '<div class="bestelknop">';
-        echo '<button onclick="cartCounter(' . $x["code"] . ')">Bestel</button>';
+        echo '<button onclick="cartCounter(' . $x["code"] . ')">BESTEL</button>';
         echo '</div>';
         echo '</div>';
         $productamount++;

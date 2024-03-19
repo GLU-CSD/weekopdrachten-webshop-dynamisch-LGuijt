@@ -6,5 +6,8 @@ spullenInWagen.innerHTML = counter;
 function cartCounter(productcode) {
   counter++;
   spullenInWagen.innerHTML = counter;
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "winkellijst.php?code=" + productcode);
+  xmlhttp.send();
   console.log(productcode);
 }

@@ -1,0 +1,63 @@
+#wagen {
+    border: 1px solid black;
+    width: 80%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 60% 30%;
+}
+
+#wwtxt{
+    font-size: 50px;
+    border-bottom: 1px solid yellow;
+    grid-row: 1;
+    grid-column: 1/span 2;
+}
+
+#date{
+    font-style: italic;
+    grid-row: 2;
+    grid-column: 1/ span 2;
+}
+
+.items{
+    border: 1px solid black;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 30% 40%;
+    min-height: 150px;
+}
+
+.itemimg{
+    grid-column: 1;
+    border: 1px solid purple;
+    grid-row: 1/ span 3;
+    margin: 3%;
+}
+
+.itemtitle{
+    grid-column: 2;
+    font-size: large;
+    font-weight: bold;
+    grid-row: 1;
+}
+
+.itemprice{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.hoescheck{
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0%;
+}
+
+.hoesprijs{
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.itemtotal{
+    grid-column: 3;
+    grid-row: 3;
+}

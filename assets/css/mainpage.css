@@ -83,8 +83,8 @@ select {
 /*class voor de producten*/
 .product {
   border: 1px dotted black;
-  height: 300px;
-  width: 200px;
+  height: 350px;
+  width: 220px;
   margin: 15px;
   display: grid;
   align-items: center;

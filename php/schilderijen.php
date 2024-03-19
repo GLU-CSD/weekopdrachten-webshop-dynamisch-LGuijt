@@ -68,6 +68,7 @@
     </div>
     <div id="productlist"><!-- de producten, plus de hoeveelheid aan de boven en onderkant-->
       <div class="productdescription">fluid art acryl schilderijen</div>
+      <div id="check"></div>
       <div id="allproducts"><!--alle producten op de pagina-->
         <?php
         include 'schilderijenpl.php'
