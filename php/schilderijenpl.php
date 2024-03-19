@@ -1,5 +1,4 @@
 <?php
-$my_array = array();
 $productamount = 0;
 $file_json = file_get_contents("../products.json");
 $file = json_decode($file_json, true);
