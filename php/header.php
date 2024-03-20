@@ -1,7 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION["cartitems"])){
-  var_dump($_SESSION["cartitems"]);
+if(isset($_SESSION["extrahoes"])){
+  var_dump($_SESSION["extrahoes"]);
+  // $key = array_search("3", $_SESSION["extrahoes"]);
+  // if ($key !== false){
+  //   unset($_SESSION["extrahoes"][$key]);
+  // }
+  // $_SESSION["extrahoes"] = array_values($_SESSION["extrahoes"]);
+  // var_dump($_SESSION["extrahoes"]);
 }
 ?>
 

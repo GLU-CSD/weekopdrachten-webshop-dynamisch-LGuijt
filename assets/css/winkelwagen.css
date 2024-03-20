@@ -79,6 +79,15 @@
     opacity: 0.5;
 }
 
+.hoesprijsb{
+    grid-column: 4;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+    margin-right: 3%;
+    opacity: 1;
+}
+
 .itemtotal{
     grid-column: 4;
     grid-row: 3;

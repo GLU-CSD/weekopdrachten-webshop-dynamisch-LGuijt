@@ -4,4 +4,11 @@ session_start();
 
 $hoeslijst = $_REQUEST["hoes"];
 
-echo "yes";
+if (!isset($_SESSION["extrahoes"])){
+    $_SESSION["extrahoes"] = array();
+    array_push($_SESSION["extrahoes"], $hoeslijst);
+    echo $hoeslijst;
+} else {
+    array_push($_SESSION["extrahoes"], $hoeslijst);
+    echo $hoeslijst;
+}

@@ -7,11 +7,11 @@ function toggle(x) {
   } else {
     checked = true;
   }
-  const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "hoeslijst.php?hoes=" + x);
-  xhttp.onload() = function() {
-    document.getElementById("hoescheck" + x).innerHTML = this.responseText;
+  const xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "hoeslijst.php?hoes=" + x);
+  xmlhttp.onload = function(){
+    console.log("hoescheck" + this.responseText);
   }
-  xhttp.send();
+  xmlhttp.send();
   console.log(checked);
 }

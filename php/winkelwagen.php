@@ -13,12 +13,23 @@
         foreach ($_SESSION["cartitems"] as $prcode) {
             foreach ($file as $p) {
                 if ($p["code"] == $prcode) {
+                    $extrahoes = false;
+                    foreach ($_SESSION["extrahoes"] as $q){
+                        if ($q == $p["code"]){
+                            $extrahoes = true;
+                        }
+                    }
+                    if ($extrahoes == true){
+                        echo "in array";
+                    } else if ($extrahoes == false){
+                        echo "not in array";
+                    }
                     echo '<div class="items">';
                     echo '<div class="trashcan"><img src="../assets/iconen/delete.png"></div>'; 
                     echo '<div class="itemimg"><img src="' . $p["img"] .'"></div>';
                     echo '<div class="itemtitle">'. $p["type"] ." " . $p["name"] . '</div>';
                     echo '<div class="itemprice">€' . $p["price"] . '</div>';
-                    echo '<p class="hoescheck"><input type="checkbox" onchange="toggle(' . $p["code"] . ');" value="yes" name="hoescheck' . $p["code"] . '" id="hoescheck' . $p["code"] . '">';
+                    echo '<p class="hoescheck" id="hoescheck' . $p["code"] . '"><input type="checkbox" onchange="toggle(' . $p["code"] . ');" value="yes" name="hoescheck' . $p["code"] . '">';
                     echo 'Extra beschermende hoes?';
                     echo '<p>';
                     $price = $p["price"];
