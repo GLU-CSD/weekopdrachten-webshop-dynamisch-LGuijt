@@ -1,5 +1,5 @@
 #wagen {
-    width: 80%;
+    width: 85%;
     justify-self: center;
     display: grid;
     grid-template-columns: 60% 30%;
@@ -79,15 +79,6 @@
     opacity: 0.5;
 }
 
-.hoesprijsb{
-    grid-column: 4;
-    grid-row: 2;
-    align-self: center;
-    justify-self: end;
-    margin-right: 3%;
-    opacity: 1;
-}
-
 .itemtotal{
     grid-column: 4;
     grid-row: 3;
@@ -95,3 +86,39 @@
     font-weight: bold;
     margin: auto;
 }
+
+#overzicht{
+    display: grid;
+    grid-template-rows: 5% 15% 10% 10%;
+}
+
+#overzichttext{
+    background-color: #4f5052;
+    color: white;
+    font-size: larger;
+    padding: 1%;
+    padding-left: 30%;
+}
+
+#lijstprijs{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2%;
+    margin: 1px;
+}
+
+#total{
+    justify-self: end;
+    font-size: 50px;
+    border-top: 2px solid black;
+}
+
+#besknop{
+    background-color: #076178;
+    color: white;
+    width: 90%;
+    justify-self: end;
+    font-size: 20px;
+    border: none;
+}
+
