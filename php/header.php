@@ -1,11 +1,5 @@
 <?php
 session_start();
-if(isset($_SESSION["cartitems"])){
-  var_dump($_SESSION["cartitems"]);
-}
-if(isset($_SESSION["extrahoes"])){
-  var_dump($_SESSION["extrahoes"]);
-}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +20,7 @@ if(isset($_SESSION["extrahoes"])){
   <link rel="stylesheet" href="../assets/css/homepage.css">
   <link rel="stylesheet" href="../assets/css/detailpag.css">
   <link rel="stylesheet" href="../assets/css/winkelwagen.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icono/1.3.0/icono.min.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
 
   <meta name="description" content="">
 
@@ -58,17 +52,21 @@ if(isset($_SESSION["extrahoes"])){
         <input type="text" id="search" name="search" placeholder="Search.." oninput="pingpong()">
       </div>
       <div class="homelinks" id="homelinks"> <!--laatste paar navigatiebalk links-->
-        <a class="links" href="https://www.instagram.com/fruit.fish7980/" target="_blank">Inloggen &nbsp;<img
+        <a class="links" href="./loginpage.php" target="_blank">Inloggen &nbsp;<img
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
         <a class="links" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
-        <a class="links" href="./bestel.php" target="_blank">Winkelwagen(<span id="inwagen"></span>) &nbsp;<img
+        <a class="links" href="./winkelwagen.php" target="_blank">Winkelwagen(<?php if(isset($_SESSION["cartitems"])){
+           echo count($_SESSION["cartitems"]);
+          } else {
+            echo "0";
+          } ?>) &nbsp;<img
             src="../assets/iconen/cart.png" alt="winkelwagen"></a>
         <!--voor kleinere schermen alleen, klapt de links hiervoor uit-->
         <button class="icon" onclick="burgerOne()"><img src="../assets/iconen/hamburger.png" alt="hamburger"></button>
       </div>
       <div id="burgernav">
-        <a class="burgerlinks" href="./index.php" target="_self">Schilderijen</a>
+        <a class="burgerlinks" href="./schilderijen.php" target="_self">Schilderijen</a>
         <a class="burgerlinks" href="./tekeningen.php" target="_self">Tekeningen</a>
         <a class="burgerlinks" href="./kaarten.php" target="_self">Kaarten</a>
         <a class="burgerlinks" href="./dozen.php" target="_self">Dozen</a>
@@ -77,7 +75,7 @@ if(isset($_SESSION["extrahoes"])){
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
         <a class="burgerlinks" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
-        <a class="burgerlinks" href="./bestel.php" target="_blank">Winkelwagen&nbsp;<img
+        <a class="burgerlinks" href="./winkelwagen.php" target="_blank">Winkelwagen&nbsp;<img
             src="../assets/iconen/cart.png" alt="winkelwagen"></a>
       </div>
     </div>

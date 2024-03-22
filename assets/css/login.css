@@ -1,0 +1,74 @@
+#loginbody{
+    justify-self: center;
+    justify-content: center;
+    display: grid;
+}
+
+#logintitle{
+    font-size: 70px;
+    font-style: italic;
+    justify-self: center;
+}
+
+#loginimg{
+    border-radius: 1%;
+    width: 250px;
+    height: 250px;
+    justify-self: center;
+    background-image: url(../schilderijen/schilderij_dertien.png);
+    background-position: center center;
+}
+
+#signuplink{
+    color: black;
+    font-size: small;
+    opacity: .6;
+    justify-self: center;
+    width: 200px;
+}
+
+#loginbody form{
+    display: grid;
+    padding: 0px;
+    grid-template-rows: 25px;
+}
+
+#loginbody input{
+    width: 260px;
+    height: 25px;
+    justify-self: center;
+    margin: 0;
+    border-radius: 5px;
+}
+
+#wwvergeten{
+    color: #36a0ba;
+}
+
+#loginbutton{
+    width: 270px;
+    height: 50px;
+    background-color: #076178;
+    justify-self: center;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    transition-duration: .3s;
+}
+
+#loginbutton:hover{
+    background-color: #36a0ba;
+    color: white;
+}
+
+@media screen and (max-width: 450px){
+    #signuplink{
+        font-size: 20px;
+    }
+
+    #loginbody input{
+        height: 30px;
+    }
+}

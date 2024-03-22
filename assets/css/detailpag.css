@@ -93,3 +93,31 @@
     font-size: large;
     width: 80%;
 }
+
+@media screen and (max-width: 450px){
+    #detailpage{
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 15%;
+    }
+
+    #detailtitle{
+        grid-column: 1;
+        grid-row: 2;
+        border-bottom: 1px solid black;
+    }
+
+    #detailpiccon{
+        align-self: center;
+        grid-row:1;
+    }
+
+    #detailtext{
+        height: 350px;
+        align-content: center;
+    }
+
+    #detailprice{
+        font-weight: bold;
+        font-size: 40px;
+    }
+}

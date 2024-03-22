@@ -24,7 +24,7 @@
                     echo '<div class="items">';
                     echo '<div class="trashcan" onclick="trashcan(' . $p["code"] . ')"><img src="../assets/iconen/delete.png"></div>';
                     echo '<div class="itemimg"><img src="' . $p["img"] . '"></div>';
-                    echo '<div class="itemtitle">' . $p["type"] . " " . $p["name"] . '</div>';
+                    echo '<div class="itemtitle">' . $p["category"] . " - " . $p["name"] . '</div>';
                     echo '<div class="itemprice">€' . $p["price"] . '</div>';
                     if ($extrahoes == true) {
                         echo '<p class="hoescheck" id="hoescheck' . $p["code"] . '"><input type="checkbox" id="checkbox' . $p["code"] . '" onclick="toggle(' . $p["code"] . ', true);" value="yes" name="hoescheck' . $p["code"] . '" checked>';
@@ -62,9 +62,16 @@
     <div id="overzicht">
         <div id="overzichttext">Overzicht</div>
         <div id="lijstprijs">
-            <div id="p1">Artikel(en)(
-                <?php echo $artikelamount ?>
-                )
+            <div id="p1">
+                <?php
+                if ($artikelamount > 1) {
+                    echo "Artikel(en)(";
+                    echo $artikelamount;
+                    echo ")";
+                } else {
+                    echo "Artikelprijs";
+                }
+                ?>
             </div>
             <div id="artikelprijzen">€
                 <span id="combiprijs">
@@ -86,10 +93,11 @@
             </div>
         </div>
         <div id="total">
-            €<span id="totalmoney"><?php echo $fulltotal ?>
+            €<span id="totalmoney">
+                <?php echo $fulltotal ?>
             </span>
         </div>
-        <button id="besknop">Verder naar Bestellen</button>
+        <a id="besknop" href="./bestel.php"><p>Verder naar Bestellen</p></a>
     </div>
 </div>
 <?php include './footer.php' ?>

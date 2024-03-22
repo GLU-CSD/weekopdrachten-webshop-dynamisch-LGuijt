@@ -1,8 +1,10 @@
 #wagen {
     width: 85%;
+    min-height: 500px;
     justify-self: center;
     display: grid;
     grid-template-columns: 60% 30%;
+    grid-template-rows: 50px 10px;
 }
 
 #wwtxt{
@@ -18,20 +20,17 @@
     grid-column: 1/ span 2;
 }
 
+
 .items{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4) ;
     margin: 5%;
     display: grid;
     grid-template-columns: 5% 20% 40%;
-    
+    transition-duration: .3s;
 }
 
-.items img{
-    transition-duration: .1s;
-}
-
-.items:hover img{
-    max-height: 110px;
+.items:hover{
+    box-shadow: 1px 1px 5px black;
 }
 
 .itemimg{
@@ -89,15 +88,17 @@
 
 #overzicht{
     display: grid;
-    grid-template-rows: 5% 15% 10% 10%;
+    grid-template-rows: 7% 20% 15% 10%;
+    max-height: 500px;
 }
 
 #overzichttext{
     background-color: #4f5052;
     color: white;
     font-size: larger;
-    padding: 1%;
+    padding: 2%;
     padding-left: 30%;
+    align-self: center;
 }
 
 #lijstprijs{
@@ -120,5 +121,58 @@
     justify-self: end;
     font-size: 20px;
     border: none;
+    transition-duration: .3s;
+    text-decoration: none;
+    padding: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#besknop:hover{
+    background-color: #36a0ba;
+    box-shadow: 1px 1px 5px #076178;
+}
+
+@media screen and (max-width: 450px){
+     #overzicht{
+        grid-row: 3;
+        align-items: center;
+        grid-template-rows: 30px;
+    }
+
+    #imgcon{
+        grid-row: 4;
+        width: 100%;
+    } 
+
+    #wagen{
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 40px
+    }
+
+    .itemimg{
+        align-self: center;
+    }
+
+    #besknop{
+        height: 40px;
+        width: 100%;
+    }
+
+    .itemtitle{
+        font-size: 25px;
+    }
+
+    #overzichttext{
+        font-size: 25px;
+    }
+
+    #lijstprijs{
+        font-size: 20px;
+    }
+
+    #total{
+        font-size: 40px;
+    }
+}
