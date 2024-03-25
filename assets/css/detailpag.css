@@ -3,8 +3,8 @@
     margin-left: 10%;
     display: grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 10% 90%;
-    min-height: 600px;
+    grid-template-rows: 10% 60% 40%;
+    min-height: 800px;
     column-gap: 40px;
 }
 
@@ -92,6 +92,30 @@
 #detailinfo{
     font-size: large;
     width: 80%;
+}
+
+#extraproducten{
+    max-height: 200px;
+    background-color: #36a0ba;
+    display: grid;
+    grid-row: 3;
+    grid-column: 1/span 2;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-content: center;
+    justify-items: center;
+}
+
+.extra {
+    max-height: 200px;
+}
+
+.extraimg{
+    display: flex;
+    justify-content: center;
+}
+
+.extraimg img{
+    max-height: 100px;
 }
 
 @media screen and (max-width: 450px){

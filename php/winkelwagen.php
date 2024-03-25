@@ -8,61 +8,77 @@
         <?php
         $totalprice = 0;
         $artikelamount = 0;
+        $btw = 0;
+        $fulltotal = 0;
         $zendkosten = 4.35;
         $file_json = file_get_contents("../products.json");
         $file = json_decode($file_json, true);
 
-        foreach ($_SESSION["cartitems"] as $prcode) {
-            foreach ($file as $p) {
-                if ($p["code"] == $prcode) {
-                    $extrahoes = false;
-                    foreach ($_SESSION["extrahoes"] as $q) {
-                        if ($q == $p["code"]) {
-                            $extrahoes = true;
-                        }
-                    } ?>
-                    <div class="items">
-                    <div class="trashcan" onclick="trashcan(<?= $p['code'] ?>)"><img src="../assets/iconen/delete.png"></div>
-                    <div class="itemimg"><img src="<?= $p["img"] ?>"></div>
-                    <div class="itemtitle"><?= $p["category"] . ' - ' . $p["name"] ?></div>
-                    <div class="itemprice">&euro;<?= $p["price"] ?></div>
-                    <?php
-                    if ($extrahoes == true) {
-                        ?>
-                        <p class="hoescheck" id="hoescheck<?= $p["code"] ?>">
-                        <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, true)" value="yes" name="hoescheck<?= $p["code"] ?>" checked>
-                        Extra beschermende hoes?</p>
-                        <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>" style="opacity:1">€5.00</div>
+        if (isset ($_SESSION["cartitems"])) {
+            foreach ($_SESSION["cartitems"] as $prcode) {
+                foreach ($file as $p) {
+                    if ($p["code"] == $prcode) {
+                        $extrahoes = false;
+                        foreach ($_SESSION["extrahoes"] as $q) {
+                            if ($q == $p["code"]) {
+                                $extrahoes = true;
+                            }
+                        } ?>
+                        <div class="items">
+                            <div class="trashcan" onclick="trashcan(<?= $p['code'] ?>)"><img src="../assets/iconen/delete.png"></div>
+                            <div class="itemimg"><img src="<?= $p["img"] ?>"></div>
+                            <div class="itemtitle">
+                                <?= $p["category"] . ' - ' . $p["name"] ?>
+                            </div>
+                            <div class="itemprice">&euro;
+                                <?= $p["price"] ?>
+                            </div>
+                            <?php
+                            if ($extrahoes == true) {
+                                ?>
+                                <p class="hoescheck" id="hoescheck<?= $p["code"] ?>">
+                                    <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, true)"
+                                        value="yes" name="hoescheck<?= $p["code"] ?>" checked>
+                                    Extra beschermende hoes?
+                                </p>
+                                <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>" style="opacity:1">€5.00</div>
+                                <?php
+                                $h = 5;
+                            } else if ($extrahoes == false) {
+                                ?>
+                                    <p class="hoescheck" id="hoescheck<?= $p["code"] ?>">
+                                        <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, false)"
+                                            value="yes" name="hoescheck<?= $p["code"] ?>">
+                                        Extra beschermende hoes?
+                                    </p>
+                                    <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>">€5.00</div>
+                                    <?php
+                                    $h = 0;
+                            }
+                            $price = $p["price"] + $h;
+                            ?>
+                            <div class="itemtotal">&euro;<span id="totalitemprice<?= $p["code"] ?>">
+                                    <?= $price ?>
+                                </span></div>
+                        </div>
                         <?php
-                        $h = 5;
-                    } else if ($extrahoes == false) {
-                        ?>
-                        <p class="hoescheck" id="hoescheck<?= $p["code"]?>">
-                        <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, false)" value="yes" name="hoescheck<?= $p["code"] ?>">
-                        Extra beschermende hoes?</p>
-                        <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>">€5.00</div>
-                        <?php
-                        $h = 0;
+                        $totalprice += $price;
+                        $artikelamount++;
                     }
-                    $price = $p["price"] + $h;
-                    ?>
-                    <div class="itemtotal">&euro;<span id="totalitemprice<?= $p["code"] ?>"><?= $price ?></span></div>
-                    </div>
-                    <?php
-                    $totalprice += $price;
-                    $artikelamount++;
                 }
             }
-        }
 
-        if ($artikelamount == 0) {
+            if ($artikelamount == 0) {
+                echo "geen producten in winkelmand";
+            }
+            $totalprice = number_format($totalprice, 2);
+            $btw = $totalprice * 0.21;
+            $btw = number_format($btw, 2);
+            $fulltotal = $totalprice + $zendkosten + $btw;
+            $fulltotal = number_format($fulltotal, 2);
+        } else {
             echo "geen producten in winkelmand";
         }
-        $totalprice = number_format($totalprice, 2);
-        $btw = $totalprice * 0.21;
-        $btw = number_format($btw, 2);
-        $fulltotal = $totalprice + $zendkosten + $btw;
-        $fulltotal = number_format($fulltotal, 2);
         ?>
     </div>
     <div id="overzicht">
@@ -85,23 +101,25 @@
             <div id="p2">Verzendkosten</div>
             <div id="zendkost"><!-- CHANGE LATER -->
                 €<span id="ugh">
-                    <?php echo $zendkosten ?>
+                    <?= $zendkosten ?>
                 </span>
             </div>
             <div id="p3">BTW</div>
             <div>
                 €
                 <span id="btw">
-                    <?php echo $btw ?>
+                    <?= $btw ?>
                 </span>
             </div>
         </div>
         <div id="total">
             €<span id="totalmoney">
-                <?php echo $fulltotal ?>
+                <?= $fulltotal ?>
             </span>
         </div>
-        <a id="besknop" href="./bestel.php"><p>Verder naar Bestellen</p></a>
+        <a id="besknop" href="./bestel.php">
+            <p>Verder naar Bestellen</p>
+        </a>
     </div>
 </div>
 <?php include './footer.php' ?>
