@@ -2,7 +2,7 @@
 <div id="wagen">
     <div id="wwtxt">Winkelwagen</div>
     <div id="date">
-        <?php echo date("d-m-Y"); ?>
+        <?= date("d-m-Y"); ?>
     </div>
     <div id="imgcon">
         <?php
@@ -20,29 +20,35 @@
                         if ($q == $p["code"]) {
                             $extrahoes = true;
                         }
-                    }
-                    echo '<div class="items">';
-                    echo '<div class="trashcan" onclick="trashcan(' . $p["code"] . ')"><img src="../assets/iconen/delete.png"></div>';
-                    echo '<div class="itemimg"><img src="' . $p["img"] . '"></div>';
-                    echo '<div class="itemtitle">' . $p["category"] . " - " . $p["name"] . '</div>';
-                    echo '<div class="itemprice">€' . $p["price"] . '</div>';
+                    } ?>
+                    <div class="items">
+                    <div class="trashcan" onclick="trashcan(<?= $p['code'] ?>)"><img src="../assets/iconen/delete.png"></div>
+                    <div class="itemimg"><img src="<?= $p["img"] ?>"></div>
+                    <div class="itemtitle"><?= $p["category"] . ' - ' . $p["name"] ?></div>
+                    <div class="itemprice">&euro;<?= $p["price"] ?></div>
+                    <?php
                     if ($extrahoes == true) {
-                        echo '<p class="hoescheck" id="hoescheck' . $p["code"] . '"><input type="checkbox" id="checkbox' . $p["code"] . '" onclick="toggle(' . $p["code"] . ', true);" value="yes" name="hoescheck' . $p["code"] . '" checked>';
-                        echo 'Extra beschermende hoes?';
-                        echo '<p>';
-                        echo '<div class="hoesprijs" id="hoesprijs' . $p["code"] . '" style="opacity:1">€5.00</div>';
+                        ?>
+                        <p class="hoescheck" id="hoescheck<?= $p["code"] ?>">
+                        <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, true)" value="yes" name="hoescheck<?= $p["code"] ?>" checked>
+                        Extra beschermende hoes?</p>
+                        <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>" style="opacity:1">€5.00</div>
+                        <?php
                         $h = 5;
                     } else if ($extrahoes == false) {
-                        echo '<p class="hoescheck" id="hoescheck' . $p["code"] . '"><input type="checkbox" id="checkbox' . $p["code"] . '" onclick="toggle(' . $p["code"] . ', false);" value="yes" name="hoescheck' . $p["code"] . '">';
-                        echo 'Extra beschermende hoes?';
-                        echo '<p>';
-                        echo '<div class="hoesprijs" id="hoesprijs' . $p["code"] . '">€5.00</div>';
+                        ?>
+                        <p class="hoescheck" id="hoescheck<?= $p["code"]?>">
+                        <input type="checkbox" id="checkbox<?= $p["code"] ?>" onclick="toggle(<?= $p['code'] ?>, false)" value="yes" name="hoescheck<?= $p["code"] ?>">
+                        Extra beschermende hoes?</p>
+                        <div class="hoesprijs" id="hoesprijs<?= $p["code"] ?>">€5.00</div>
+                        <?php
                         $h = 0;
                     }
                     $price = $p["price"] + $h;
-
-                    echo '<div class="itemtotal">€<span id="totalitemprice' . $p["code"] . '">' . $price . '</span></div>';
-                    echo '</div>';
+                    ?>
+                    <div class="itemtotal">&euro;<span id="totalitemprice<?= $p["code"] ?>"><?= $price ?></span></div>
+                    </div>
+                    <?php
                     $totalprice += $price;
                     $artikelamount++;
                 }
@@ -65,9 +71,7 @@
             <div id="p1">
                 <?php
                 if ($artikelamount > 1) {
-                    echo "Artikel(en)(";
-                    echo $artikelamount;
-                    echo ")";
+                    echo 'Artikel(en)(' . $artikelamount . ')';
                 } else {
                     echo "Artikelprijs";
                 }
@@ -75,7 +79,7 @@
             </div>
             <div id="artikelprijzen">€
                 <span id="combiprijs">
-                    <?php echo $totalprice ?>
+                    <?= $totalprice ?>
                 </span>
             </div>
             <div id="p2">Verzendkosten</div>
