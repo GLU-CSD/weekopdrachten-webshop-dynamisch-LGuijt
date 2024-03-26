@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     <div id="detailprice">&euro;
                         <?= $x["price"] ?>
                     </div>
-                    <button id="addcart" onclick="myFunction(<?= $x['code'] ?>)">Voeg toe aan winkelwagen</button>
+                    <button id="addcart" onclick="cartCounter(<?= $x['code'] ?>)">Voeg toe aan winkelwagen</button>
                     <button id="addfave">Voeg toe aan favorieten</button>
                     <ul id="detailinfo">
                         <?php
@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                     </ul>
                 </div>
                 <div id="extraproducten">
+                    <div id="soortprod">Soortgelijke producten</div>
                     <?php
                     foreach ($x["extras"] as $e) {
                         ?>
@@ -48,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <?php foreach ($file as $z) {
                                 if ($e == $z["code"]) {
                                     ?>
-                                    <div class="extraimg"><img src="<?= $z["img"] ?>"></div>
+                                    <div class="extraimg"><a href="./detailpag.php?sku=<?= $z["code"] ?>" target="_blank"><img src="<?= $z["img"] ?>"></a></div>
                                     <div class="extratitle">
                                         <?= $z["category"] . ' - ' . $z["name"] ?>
                                     </div>
@@ -70,11 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
 ?>
 <script>
-
-    function myFunction(code) {
-        cartCounter(code);
-        document.location = './winkelwagen.php';
-    }
 
 </script>
 <?php include './footer.php' ?>

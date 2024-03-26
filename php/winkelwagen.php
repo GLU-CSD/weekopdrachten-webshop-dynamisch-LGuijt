@@ -13,6 +13,8 @@
         $zendkosten = 4.35;
         $file_json = file_get_contents("../products.json");
         $file = json_decode($file_json, true);
+        $crossarray = array();
+        $random = array();
 
         if (isset ($_SESSION["cartitems"])) {
             foreach ($_SESSION["cartitems"] as $prcode) {
@@ -28,7 +30,9 @@
                             <div class="trashcan" onclick="trashcan(<?= $p['code'] ?>)"><img src="../assets/iconen/delete.png"></div>
                             <div class="itemimg"><img src="<?= $p["img"] ?>"></div>
                             <div class="itemtitle">
-                                <?= $p["category"] . ' - ' . $p["name"] ?>
+                                <a href="detailpag.php?sku=<?= $p["code"] ?>" target="_blank">
+                                    <?= $p["category"] . ' - ' . $p["name"] ?>
+                                </a>
                             </div>
                             <div class="itemprice">&euro;
                                 <?= $p["price"] ?>
@@ -64,6 +68,8 @@
                         <?php
                         $totalprice += $price;
                         $artikelamount++;
+                    } else {
+                        array_push($crossarray, $p["code"]);
                     }
                 }
             }
@@ -78,6 +84,9 @@
             $fulltotal = number_format($fulltotal, 2);
         } else {
             echo "geen producten in winkelmand";
+            foreach ($file as $p) {
+                array_push($crossarray, $p["code"]);
+            }
         }
         ?>
     </div>
@@ -120,6 +129,38 @@
         <a id="besknop" href="./bestel.php">
             <p>Verder naar Bestellen</p>
         </a>
+    </div>
+    <div id="crosssell">
+        <?php
+        if (count($crossarray) >= 4) {
+            $randomkeys = array_rand($crossarray, 4);
+            foreach ($randomkeys as $ran) {
+                array_push($random, $crossarray[$ran]);
+            }
+        } else {
+            $random = $crossarray;
+        }
+        ?>
+        <div id="crosstitle">Mogelijk ook interessant</div>
+        <div id="crosscon">
+            <?php foreach ($random as $ran) {
+                foreach ($file as $r) {
+                    if ($ran == $r["code"]) { ?>
+                        <div class="crossitem">
+                            <div class="crossimg"><a href="./detailpag.php?sku=<?= $r["code"] ?>" target="_blank"><img src="<?= $r["img"] ?>"></a>
+                            </div>
+                            <div class="xtitle">
+                                <?= $r["category"] . ' - ' . $r["name"] ?>
+                            </div>
+                            <div class="crossprice">&euro;
+                                <?= $r["price"] ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+            } ?>
+        </div>
     </div>
 </div>
 <?php include './footer.php' ?>

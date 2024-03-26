@@ -45,6 +45,10 @@
     margin: 3%;
 }
 
+.detailpicsmall:hover{
+    border: .5px solid black;
+}
+
 #detailtext{
     height: 450px;
     width: 80%;
@@ -96,17 +100,34 @@
 
 #extraproducten{
     max-height: 200px;
-    background-color: #36a0ba;
+    background-color: #076178;
     display: grid;
     grid-row: 3;
     grid-column: 1/span 2;
     grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 15% 85%;
     align-content: center;
-    justify-items: center;
 }
 
-.extra {
-    max-height: 200px;
+#soortprod{
+    grid-column: 1/span 4;
+    align-self: center;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 5px;
+}
+
+.extra{
+    padding: 5%;
+    padding-top: 10%;
+    background-color: white;
+    display: grid;
+    transition-duration: .4s;
+}
+
+.extra:hover{
+    background-color: #076178;
+    color: white;
 }
 
 .extraimg{
@@ -116,6 +137,14 @@
 
 .extraimg img{
     max-height: 100px;
+}
+
+.extratitle{
+    justify-self: center
+}
+
+.extraprice{
+    justify-self: center;
 }
 
 @media screen and (max-width: 450px){
