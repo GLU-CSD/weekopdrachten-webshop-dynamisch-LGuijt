@@ -34,7 +34,6 @@ session_start();
   <link rel="icon" href="../assets/iconen/fandf.png" type="image/svg+xml">
   <link rel="apple-touch-icon" href="fandf.png">
 
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
 

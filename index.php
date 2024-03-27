@@ -1,3 +1,4 @@
-<script>
-location.replace("/php/homepage.php");
-</script>
+<?php
+
+header("Location: /php/homepage.php");
+exit();

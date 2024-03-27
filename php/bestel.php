@@ -1,8 +1,6 @@
 <?php include './header.php' ?>
 <div class="bestelpage">
     <?php
-    $aanhef = $vnaam = $tnaam = $anaam = $postcode = $strtnaam = $huisnummer = $numtoev = $email = $phone = $geboortedatum = $voorwaarde = "";
-    $aanheferr = $vnaamerr = $anaamerr = $postcodeerr = $strtnaamerr = $huisnummererr = $emailerr = $phoneerr = $geboortedatumerr = $voorwaardeerr = "";
     $errormess = "Dit veld is verplicht";
     $accept = "";
     $file_json = file_get_contents("../products.json");
@@ -30,81 +28,6 @@
 
     $total = $price + $hoesprijs + $btw + $zendkos;
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty ($_POST["aanhef"])) {
-            $aanheferr = $errormess;
-        } else {
-            $aanhef = test_input($_POST["aanhef"]);
-        }
-
-        if (empty ($_POST["vnaam"])) {
-            $vnaamerr = $errormess;
-        } else {
-            $vnaam = test_input($_POST["vnaam"]);
-        }
-
-        if (empty ($_POST["anaam"])) {
-            $anaamerr = $errormess;
-        } else {
-            $anaam = test_input($_POST["anaam"]);
-        }
-
-        if (empty ($_POST["postcode"])) {
-            $postcodeerr = $errormess;
-        } else {
-            $postcode = test_input($_POST["postcode"]);
-        }
-
-        if (empty ($_POST["strtnaam"])) {
-            $strtnaamerr = $errormess;
-        } else {
-            $strtnaam = test_input($_POST["strtnaam"]);
-        }
-
-        if (empty ($_POST["huisnummer"])) {
-            $huisnummererr = $errormess;
-        } else {
-            $huisnummer = test_input($_POST["huisnummer"]);
-        }
-
-        if (empty ($_POST["email"])) {
-            $emailerr = $errormess;
-        } else {
-            $email = test_input($_POST["email"]);
-        }
-
-        if (empty ($_POST["phone"])) {
-            $phoneerr = $errormess;
-        } else {
-            $phone = test_input($_POST["phone"]);
-        }
-
-        if (empty ($_POST["geboortedatum"])) {
-            $geboortedatumerr = $errormess;
-        } else {
-            $geboortedatum = test_input($_POST["geboortedatum"]);
-        }
-
-        if (empty ($_POST["voorwaarde"])) {
-            $voorwaardeerr = $errormess;
-        } else {
-            $voorwaarde = test_input($_POST["voorwaarde"]);
-        }
-
-        $tnaam = test_input($_POST["tnaam"]);
-        $numtoev = test_input($_POST["numtoev"]);
-
-        if (empty ($aanhef) || empty ($vnaam) || empty ($anaam) || empty ($postcode) || empty ($strtnaam) || empty ($huisnummer) || empty ($email) || empty ($phone) || empty ($geboortedatum) || empty ($voorwaarde)) {
-            $accept = "Een fout is voorgekomen, vul alstublieft het formulier opnieuw in.";
-        } else {
-            $accept = '<span style="color:black; font-size: medium;">Dankjewel voor de bestelling! Een bevestigingsmail volgt snel.</span>';
-            $msg = 'Beste ' . $aanhef . ' ' . $tnaam . ' ' . $anaam . ',  Dankjewel voor je bestelling bij FruitFish op ' . date("d-m-Y") . ' om ' . date("H:i") . '.';
-
-            $msg = wordwrap($msg, 70);
-
-            mail($email, "Bestelbevesting", $msg, 'From: <230067@student.glu.nl>');
-        }
-    }
     function test_input($data)
     {
         $data = trim($data);
@@ -114,13 +37,13 @@
     }
 
     ?>
-    <form class="bestel" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form class="bestel" action="bedank.php" method="post">
         <div id="productinfo">
             <div id="row1">Bestellingsinformatie</div>
             <div id="col1">
                 <p>
                     <?php if (count($_SESSION["cartitems"]) > 1) {
-                        echo "producten";
+                        echo "Producten";
                     } ?>
                 </p>
                 <p>Productprijs</p>
@@ -172,31 +95,31 @@
                     </span>
                 </p>
                 <p>
-                    <input id="vnaam" type="text" name="vnaam" placeholder="Voornaam" required
-                        onblur="checkField(this)">
+                    <input id="vnaam" type="text" name="vnaam" placeholder="Voornaam" onblur="checkField(this)"
+                        tabindex="1">
                     <span class="error">*
                         <?php echo $vnaamerr; ?>
                     </span>
-                    <input type="text" name="tnaam" placeholder="Tussenvoegsel">
-                    <input type="text" name="anaam" placeholder="Achternaam" required onblur="checkField(this)">
+                    <input type="text" name="tnaam" placeholder="Tussenvoegsel" tabindex="2">
+                    <input type="text" name="anaam" placeholder="Achternaam" onblur="checkField(this)" tabindex="3">
                     <span class="error" id="nameerror">*
                         <?php echo $anaamerr; ?>
                     </span>
                 </p>
                 <p>
-                    <input type="tel" name="phone" placeholder="0612345678" required onblur="checkField(this)">
+                    <input type="tel" name="phone" placeholder="0612345678" onblur="checkField(this)" tabindex="4">
                     <span class="error" id="telerror">*
                         <?php echo $phoneerr; ?>
                     </span>
                 </p>
                 <p>
-                    <input type="email" name="email" placeholder="E-mailadres" required onblur="checkField(this)">
+                    <input type="email" name="email" placeholder="E-mailadres" onblur="checkField(this)" tabindex="5">
                     <span class="error" id="mailerror">*
                         <?php echo $emailerr; ?>
                     </span>
                 </p>
                 <p>
-                    <input type="date" name="geboortedatum" required onblur="checkField(this)">
+                    <input type="date" name="geboortedatum" onblur="checkField(this)" tabindex="6">
                     <span class="error" id="geberror">*
                         <?php echo $geboortedatumerr; ?>
                     </span>
@@ -212,11 +135,11 @@
             </div>
             <div id="col6">
                 <p>
-                    <input type="text" name="strtnaam" placeholder="Straat" required onblur="checkField(this)">
+                    <input type="text" name="strtnaam" placeholder="Straat" onblur="checkField(this)" tabindex="7">
                     <span class="error">*
                         <?php echo $strtnaamerr ?>
                     </span>
-                    <input type="number" name="huisnummer" placeholder="Nummer" min="1" required
+                    <input type="number" name="huisnummer" placeholder="Nummer" min="1" tabindex="8"
                         onblur="checkField(this)">
                     <span class="error">*
                         <?php echo $huisnummererr; ?>
@@ -225,8 +148,7 @@
                     <span class="error" id="strterror"></span>
                 </p>
                 <p>
-                    <input type="text" name="postcode" placeholder="1234AB" pattern="[0-9]{4}[A-Za-z]{2}" required
-                        onblur="checkField(this)"><span class="error" id="codeerror">*
+                    <input type="text" name="postcode" placeholder="1234AB" pattern="[0-9]{4}[A-Za-z]{2}" onblur="checkField(this)" tabindex="9"><span class="error" id="codeerror">*
                         <?php echo $postcodeerr; ?>
                     </span>
                 </p>
@@ -242,9 +164,10 @@
         </div>
         <div id="betaalinfo">
             <div id="row4">Betaalinformatie</div>
-            <p>
+            <p> Betaalmethode:<br>
                 <input type="radio" name="betaalmethode" id="ideal" value="ideal" checked>
                 <label for="ideal">IDEAL</label>
+                <br>
                 <input type="radio" name="betaalmethode" id="paypal" value="paypal">
                 <label for="paypal">PayPal</label>
             </p>
@@ -266,5 +189,8 @@
         </div>
     </form>
 </div>
+<script>
+    document.getElementById("vnaam").focus();
+</script>
 <script src="../assets/js/validate.js"></script>
 <?php include './footer.php' ?>
