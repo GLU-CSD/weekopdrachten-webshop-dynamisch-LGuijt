@@ -1,6 +1,8 @@
 <?php include './header.php' ?>
 <div class="bestelpage">
     <?php
+    $aanhef = $vnaam = $tnaam = $anaam = $postcode = $strtnaam = $huisnummer = $numtoev = $email = $phone = $geboortedatum = $voorwaarde = "";
+    $aanheferr = $vnaamerr = $anaamerr = $postcodeerr = $strtnaamerr = $huisnummererr = $emailerr = $phoneerr = $geboortedatumerr = $voorwaardeerr = "";
     $errormess = "Dit veld is verplicht";
     $accept = "";
     $file_json = file_get_contents("../products.json");
