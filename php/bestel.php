@@ -145,9 +145,10 @@
                         onblur="checkField(this)">
                     <span class="error">*
                         <?php echo $huisnummererr; ?>
+                        <span class="error" id="strterror"></span>
                     </span>
                     <input type="text" name="numtoev" placeholder="Toevoeging">
-                    <span class="error" id="strterror"></span>
+                    
                 </p>
                 <p>
                     <input type="text" name="postcode" placeholder="1234AB" pattern="[0-9]{4}[A-Za-z]{2}" onblur="checkField(this)" tabindex="9"><span class="error" id="codeerror">*

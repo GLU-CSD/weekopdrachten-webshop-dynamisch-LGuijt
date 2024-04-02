@@ -1,0 +1,41 @@
+#bedank{
+    display: grid;
+    margin: 10px;
+    grid-template-rows: 30%;
+}
+
+#danktop {
+    background-color: #36a0ba;
+    grid-column: 1/span 3;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.dankside{
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 50% 50%;
+    box-shadow: 1px 1px 3px;
+    background-color: #fefefe;
+    color: #656565;
+}
+
+.col {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    #danktop{
+        grid-column: 1;
+    }
+
+    .dankside{
+        grid-template-columns: 40% 60%;
+    }
+    
+    .col{
+        overflow: hidden;
+    }
+}

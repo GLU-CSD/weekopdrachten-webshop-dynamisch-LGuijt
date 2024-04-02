@@ -21,6 +21,7 @@ session_start();
   <link rel="stylesheet" href="../assets/css/detailpag.css">
   <link rel="stylesheet" href="../assets/css/winkelwagen.css">
   <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="stylesheet" href="../assets/css/bedank.css">
 
   <meta name="description" content="">
 

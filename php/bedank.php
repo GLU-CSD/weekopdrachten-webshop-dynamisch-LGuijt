@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else { ?>
         <div id="bedank">
             <div id="danktop">
-                <p>Dankuwel voor uw bestelling bij Fruitfish, een bestelbevestinging per mail volgt snel
+                <p>Dank u wel voor uw bestelling bij Fruitfish, een bestelbevestinging per mail volgt snel.</p>
             </div>
             <div class="dankside">
                 <div class="col">
@@ -184,11 +184,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <?php
-        $msg = 'Beste ' . $aanhef . ' ' . $tnaam . ' ' . $anaam . ',  Dankjewel voor je bestelling bij FruitFish op ' . date("d-m-Y") . ' om ' . date("H:i") . '.';
+        $msg = '<html>
+        <head>
+        <title>Bestelbevestiging</title>
+        </head>
+        <body>
+        <p>Beste ' . $aanhef . ' ' . $tnaam . ' ' . $anaam . ',</p>
+        <p>Dank u wel voor uw bestelling bij FruitFish op ' . date("d-m-Y") . ' om ' . date("H:i") . '. Een mail met de bezorginformatie volgt z.s.m.</p>
+        <p>Met vriendelijke groet,</p>
+        <p>FruitFish</p>
+        </body>
+        </html>';
 
-        $msg = wordwrap($msg, 70);
+        $headers = 'Content-type:text/html;charset=UTF-8' . '\r\n';
+        $headers .= 'From: <230067@student.glu.nl>' . '\r\n';
 
-        mail($email, "Bestelbevesting", $msg, 'From: <230067@student.glu.nl>');
+        mail($email, "Bestelbevesting", $msg, $headers);
     }
 }
 function test_input($data)

@@ -6,20 +6,9 @@ $file = json_decode($file_json, true);
 foreach ($file as $x) {
     $filter = filefilter($x);
     if ($x["category"] == "Accesoires" && $filter == true) {
-        echo '<div class="product">';
-        echo '<div class="pic"><a href="./detailpag.php?sku=' . $x["code"] . '"><img class="' . $x["imgsize"] . '" src="' . $x["img"] . '" alt="schilderij"></a></div>';
-        echo '<div class="productname">' . $x["name"] . '</div>';
-        echo '<div class="productprijs">€' . $x["price"] . '</div>';
-        echo '<div class="productkleuren">';
-        foreach ($x["colours"] as $y) {
-            echo '<div class=' . $y . '></div>';
-        }
-        echo '</div>';
-        echo '<div class="productmaat">' . $x["maat"] . '</div>';
-        echo '<div class="bestelknop">';
-        echo '<button onclick="cartCounter(' . $x["code"] . ')">Bestel</button>';
-        echo '</div>';
-        echo '</div>';
+        ?>
+        <?php include 'productlijst.php' ?>
+        <?php
         $productamount++;
     }
 }

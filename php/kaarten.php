@@ -52,4 +52,5 @@
         </div>
     </div>
 </div>
+<script src="../assets/js/slider.js"></script>
 <?php include './footer.php' ?>
