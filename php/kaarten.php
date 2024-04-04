@@ -44,7 +44,8 @@
         <div id="productlist">
             <div class="productdescription">bijgewerkte magic the gathering kaartjes</div>
             <div id="allproducts">
-                <?php include 'kaartenpl.php' ?>
+                <?php $currentcat = "Kaarten" ?>
+                <?php include 'productlijst.php' ?>
             </div>
             <div class="productamount">
                 <?php echo $productamount; ?> artikelen

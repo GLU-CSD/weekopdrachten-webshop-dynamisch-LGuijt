@@ -71,7 +71,8 @@
       <div id="check"></div>
       <div id="allproducts"><!--alle producten op de pagina-->
         <?php
-        include 'schilderijenpl.php'
+        $currentcat = "Schilderijen";
+        include 'productlijst.php'
         ?>
       </div>
       <div class="productamount">

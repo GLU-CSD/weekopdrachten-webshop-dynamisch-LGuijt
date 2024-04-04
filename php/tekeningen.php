@@ -44,7 +44,10 @@
         <div id="productlist">
             <div class="productdescription">tekeningen</div>
             <div id="allproducts">
-                <?php include 'tekeningenpl.php' ?>
+                <?php 
+                $currentcat = "Tekeningen";
+                include 'productlijst.php';
+                ?>
             </div>
             <div class="productamount">
                 <?php echo $productamount; ?> artikelen

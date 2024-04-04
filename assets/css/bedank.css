@@ -1,3 +1,4 @@
+/* basis lay-out van pagina */
 #bedank{
     display: grid;
     margin: 10px;
@@ -5,6 +6,7 @@
     height: 600px;
 }
 
+/* bovenste banner */
 #danktop {
     background-color: #36a0ba;
     grid-column: 1/span 3;

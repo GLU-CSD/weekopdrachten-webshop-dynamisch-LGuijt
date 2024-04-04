@@ -64,7 +64,8 @@
         <div id="productlist">
             <div class="productdescription">verschillende soorten accesoires versierd met acryl fluid art</div>
             <div id="allproducts">
-                <?php include 'accesoirespl.php' ?>
+                <?php $currentcat = "Accesoires" ?>
+                <?php include 'productlijst.php' ?>
             </div>
             <div class="productamount">
                 <?php echo $productamount; ?> artikelen
