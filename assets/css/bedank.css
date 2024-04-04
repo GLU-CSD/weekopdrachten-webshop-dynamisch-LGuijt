@@ -16,6 +16,7 @@
     box-shadow: 2px 2px 5px black;
 }
 
+/* de blokjes */
 .dankside{
     display: grid;
     margin: 10px;
@@ -25,6 +26,7 @@
     color: #656565;
 }
 
+/* eerste blokje, ivm de overflow en omdat 't een kolom is*/
 .danksidef{
     margin: 10px;
     box-shadow: 1px 1px 3px;
@@ -34,15 +36,18 @@
     overflow-y: auto;
 }
 
+/* margin voor de tekst */
 .danksidef p{
     margin-left: 5px;
 }
 
+/* lay-out binnen de blokken */
 .col {
     margin-left: 5px;
 }
 
 @media screen and (max-width: 450px) {
+    /*responsive spul*/
     #bedank{
         height: 1000px;
         grid-template-rows: 20%;
