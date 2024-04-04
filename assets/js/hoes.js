@@ -8,6 +8,7 @@ function toggle(x, check) {
       let y = document.getElementById("totalitemprice" + this.response).innerHTML;
       y = parseFloat(y);
       y = y - 5;
+      y = y.toFixed(2);
       document.getElementById("totalitemprice" + this.response).innerHTML = y;
 
       let z = document.getElementById("combiprijs").innerHTML;
@@ -45,6 +46,7 @@ function toggle(x, check) {
       let y = document.getElementById("totalitemprice" + this.response).innerHTML;
       y = parseFloat(y);
       y = y + 5;
+      y = y.toFixed(2);
       document.getElementById("totalitemprice" + this.response).innerHTML = y;
 
       let z = document.getElementById("combiprijs").innerHTML;

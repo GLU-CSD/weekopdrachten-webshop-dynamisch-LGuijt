@@ -34,8 +34,7 @@
                                     <?= $p["category"] . ' - ' . $p["name"] ?>
                                 </a>
                             </div>
-                            <div class="itemprice">&euro;
-                                <?= $p["price"] ?>
+                            <div class="itemprice">&euro; <?= $p["price"] ?>
                             </div>
                             <?php
                             if ($extrahoes == true) {
@@ -61,9 +60,7 @@
                             }
                             $price = $p["price"] + $h;
                             ?>
-                            <div class="itemtotal">&euro;<span id="totalitemprice<?= $p["code"] ?>">
-                                    <?= $price ?>
-                                </span></div>
+                            <div class="itemtotal">&euro;<span id="totalitemprice<?= $p["code"] ?>"><?= $price ?></span></div>
                         </div>
                         <?php
                         $totalprice += $price;
@@ -122,9 +119,7 @@
             </div>
         </div>
         <div id="total">
-            €<span id="totalmoney">
-                <?= $fulltotal ?>
-            </span>
+            €<span id="totalmoney"><?= $fulltotal ?></span>
         </div>
         <a id="besknop" href="./bestel.php">
             <p>Verder naar Bestellen</p>

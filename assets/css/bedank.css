@@ -2,6 +2,7 @@
     display: grid;
     margin: 10px;
     grid-template-rows: 30%;
+    height: 600px;
 }
 
 #danktop {
@@ -22,11 +23,29 @@
     color: #656565;
 }
 
+.danksidef{
+    margin: 10px;
+    box-shadow: 1px 1px 3px;
+    background-color: #fefefe;
+    color: #656565;
+    max-height: 241.6px;
+    overflow-y: auto;
+}
+
+.danksidef p{
+    margin-left: 5px;
+}
+
 .col {
     margin-left: 5px;
 }
 
 @media screen and (max-width: 450px) {
+    #bedank{
+        height: 1000px;
+        grid-template-rows: 20%;
+    }
+
     #danktop{
         grid-column: 1;
     }

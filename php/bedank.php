@@ -19,7 +19,7 @@ foreach ($_SESSION["cartitems"] as $c) {
         }
     }
 }
-if (isset ($_SESSION["extrahoes"])) {
+if (isset($_SESSION["extrahoes"])) {
     foreach ($_SESSION["extrahoes"] as $h) {
         $hoesprijs += 5;
     }
@@ -28,61 +28,61 @@ $btw = $price * 0.21;
 $total = $price + $hoesprijs + $btw + $zendkos;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty ($_POST["aanhef"])) {
+    if (empty($_POST["aanhef"])) {
         $aanheferr = $errormess;
     } else {
         $aanhef = test_input($_POST["aanhef"]);
     }
 
-    if (empty ($_POST["vnaam"])) {
+    if (empty($_POST["vnaam"])) {
         $vnaamerr = $errormess;
     } else {
         $vnaam = test_input($_POST["vnaam"]);
     }
 
-    if (empty ($_POST["anaam"])) {
+    if (empty($_POST["anaam"])) {
         $anaamerr = $errormess;
     } else {
         $anaam = test_input($_POST["anaam"]);
     }
 
-    if (empty ($_POST["postcode"])) {
+    if (empty($_POST["postcode"])) {
         $postcodeerr = $errormess;
     } else {
         $postcode = test_input($_POST["postcode"]);
     }
 
-    if (empty ($_POST["strtnaam"])) {
+    if (empty($_POST["strtnaam"])) {
         $strtnaamerr = $errormess;
     } else {
         $strtnaam = test_input($_POST["strtnaam"]);
     }
 
-    if (empty ($_POST["huisnummer"])) {
+    if (empty($_POST["huisnummer"])) {
         $huisnummererr = $errormess;
     } else {
         $huisnummer = test_input($_POST["huisnummer"]);
     }
 
-    if (empty ($_POST["email"])) {
+    if (empty($_POST["email"])) {
         $emailerr = $errormess;
     } else {
         $email = test_input($_POST["email"]);
     }
 
-    if (empty ($_POST["phone"])) {
+    if (empty($_POST["phone"])) {
         $phoneerr = $errormess;
     } else {
         $phone = test_input($_POST["phone"]);
     }
 
-    if (empty ($_POST["geboortedatum"])) {
+    if (empty($_POST["geboortedatum"])) {
         $geboortedatumerr = $errormess;
     } else {
         $geboortedatum = test_input($_POST["geboortedatum"]);
     }
 
-    if (empty ($_POST["voorwaarde"])) {
+    if (empty($_POST["voorwaarde"])) {
         $voorwaardeerr = $errormess;
     } else {
         $voorwaarde = test_input($_POST["voorwaarde"]);
@@ -91,12 +91,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tnaam = test_input($_POST["tnaam"]);
     $numtoev = test_input($_POST["numtoev"]);
 
-    if (empty ($aanhef) || empty ($vnaam) || empty ($anaam) || empty ($postcode) || empty ($strtnaam) || empty ($huisnummer) || empty ($email) || empty ($phone) || empty ($geboortedatum) || empty ($voorwaarde)) {
+    if (empty($aanhef) || empty($vnaam) || empty($anaam) || empty($postcode) || empty($strtnaam) || empty($huisnummer) || empty($email) || empty($phone) || empty($geboortedatum) || empty($voorwaarde)) {
         $accept = "Een fout is voorgekomen, vul alstublieft het formulier opnieuw in.";
     } else { ?>
         <div id="bedank">
             <div id="danktop">
                 <p>Dank u wel voor uw bestelling bij Fruitfish, een bestelbevestinging per mail volgt snel.</p>
+            </div>
+            <div class="danksidef">
+                <?php
+                foreach ($_SESSION["cartitems"] as $e) {
+                    foreach ($file as $y) {
+                        if ($e == $y["code"]) { ?>
+                            <p>
+                                <?= $y["category"] ?>
+                                <?= $y["name"] ?>
+                            </p>
+                            <?php
+                        }
+                    }
+                }
+                ?>
             </div>
             <div class="dankside">
                 <div class="col">
@@ -105,6 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             echo "Producten";
                         } ?>
                     </p>
+
                     <p>Productprijs</p>
                     <p>Hoezen</p>
                     <p>BTW</p>
