@@ -2,7 +2,6 @@ function cartCounter(productcode) {
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", "winkellijst.php?status=add&code=" + productcode);
   xmlhttp.send();
-  console.log(productcode);
 }
 
 function trashcan(productcode){
@@ -12,5 +11,4 @@ function trashcan(productcode){
     location.reload();
   }
   xmlhttp.send();
-  console.log(productcode);
 }
