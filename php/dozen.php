@@ -1,9 +1,12 @@
-<?php include './header.php' ?>
+<?php 
+$pagetitle = "Dozen";
+include './header.php'; 
+?>
 <div class="mainpage">
     <div class="mainpagelinks">
         <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Dozen</p>
     </div>
-    <form action="" method="get" class="sidebar">
+    <form method="get" class="sidebar">
         <div class="filters"> <!--filters voor de maat, je kan er op klikken verder niet functioneel-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Maat</p>
             <p><input type="checkbox" name="maat[]" value="XS">XS</p>

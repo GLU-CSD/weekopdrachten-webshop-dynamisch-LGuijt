@@ -2,3 +2,5 @@
 
 
 https://u230067.gluwebsite.nl/webshop/php/homepage.php
+
+Alle schilderijen zijn uniek, daarom heb ik niet de mogelijkheid om verschillende hoeveelheden van een product te bestellen toegevoegd. In plaats daarvan is er de mogelijkheid om een extra beschermde hoes.

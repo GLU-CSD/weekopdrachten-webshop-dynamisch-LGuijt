@@ -1,6 +1,15 @@
-<?php include '../php/header.php' ?>
+<?php 
+$pagetitle = "Home";
+include '../php/header.php' 
+?>
 <div class="homepage">
-    <div id="hometitle"><h1>FruitFish</h1></div>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Let op!</strong> Dit is een schoolproject.
+    </div>
+    <div id="hometitle">
+        <h1>FruitFish</h1>
+    </div>
     <div id="plaatjes">
         <div id="frenfi">
             <div class="txt">Fruit</div>

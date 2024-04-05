@@ -1,9 +1,11 @@
-<?php include './header.php' ?>
+<?php
+ $pagetitle = "Schilderijen";
+ include './header.php' ?>
 <div class="mainpage"> <!--pagina zonder de navigatie balk en de footer -->
   <div class="mainpagelinks"><!--links boven de producten-->
     <p><a href="homepage.php">Home</a> > <a href="/index.php">Shop</a> > Schilderijen</p>
   </div>
-  <form action="" method="get" class="sidebar">
+  <form method="get" class="sidebar">
     <div class="filters"> <!--filters voor de maat, je kan er op klikken verder niet functioneel-->
       <p style="border-bottom: 1px solid black; font-size: 18px;">Maat</p>
       <p><input type="checkbox" name="maat[]" value="XS">XS</p>

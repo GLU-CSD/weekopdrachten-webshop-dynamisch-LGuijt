@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FruitFish</title>
+  <title><?= $pagetitle ?> - FruitFish</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/header.css">
   <link rel="stylesheet" href="../assets/css/mainpage.css">
@@ -22,6 +22,7 @@ session_start();
   <link rel="stylesheet" href="../assets/css/winkelwagen.css">
   <link rel="stylesheet" href="../assets/css/login.css">
   <link rel="stylesheet" href="../assets/css/bedank.css">
+  <link rel="stylesheet" href="../assets/css/placeholder.css">
 
   <meta name="description" content="">
 
@@ -54,7 +55,7 @@ session_start();
       <div class="homelinks" id="homelinks"> <!--laatste paar navigatiebalk links-->
         <a class="links" href="./loginpage.php" target="_blank">Inloggen &nbsp;<img
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
-        <a class="links" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
+        <a class="links" href="./placeholder.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
         <a class="links" href="./winkelwagen.php" target="_blank">Winkelwagen(<?php if(isset($_SESSION["cartitems"])){
            echo count($_SESSION["cartitems"]);
@@ -73,7 +74,7 @@ session_start();
         <a class="burgerlinks" href="./accesoires.php" target="_self">Accessoires</a>
         <a class="burgerlinks" href="/loginpage.php" target="_blank">Inloggen &nbsp;<img
             src="../assets/iconen/usertwo.png" alt="inlogteken"></a>
-        <a class="burgerlinks" href="./winkelwagen.php" target="_blank">Favorieten &nbsp;<img
+        <a class="burgerlinks" href="./placeholder.php" target="_blank">Favorieten &nbsp;<img
             src="../assets/iconen/heart.png" alt="hartje"></a>
         <a class="burgerlinks" href="./winkelwagen.php" target="_blank">Winkelwagen&nbsp;<img
             src="../assets/iconen/cart.png" alt="winkelwagen"></a>

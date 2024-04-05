@@ -1,4 +1,7 @@
-<?php include './header.php' ?>
+<?php
+$pagetitle = "Inloggen";
+include './header.php';
+ ?>
 
 <div id="loginbody">
     <div id="logintitle"> Inloggen</div>

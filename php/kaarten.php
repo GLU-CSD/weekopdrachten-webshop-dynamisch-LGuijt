@@ -1,9 +1,11 @@
-<?php include './header.php' ?>
+<?php
+$pagetitle = "Kaarten";
+include './header.php' ?>
 <div class="mainpage">
     <div class="mainpagelinks">
         <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Kaarten</p>
     </div>
-    <form action="" method="get" class="sidebar">
+    <form method="get" class="sidebar">
         <div class="filters"><!--prijs sliders-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Prijs</p>
             <p>Min. Prijs:</p>

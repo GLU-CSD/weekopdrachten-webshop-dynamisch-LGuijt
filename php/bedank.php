@@ -1,4 +1,7 @@
-<?php include './header.php' ?>
+<?php 
+$pagetitle = "Winkelwagen";
+include './header.php';
+?>
 <?php
 $aanhef = $vnaam = $tnaam = $anaam = $postcode = $strtnaam = $huisnummer = $numtoev = $email = $phone = $geboortedatum = $voorwaarde = "";
 $aanheferr = $vnaamerr = $anaamerr = $postcodeerr = $strtnaamerr = $huisnummererr = $emailerr = $phoneerr = $geboortedatumerr = $voorwaardeerr = "";

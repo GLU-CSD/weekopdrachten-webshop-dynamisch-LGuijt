@@ -1,4 +1,6 @@
-<?php include './header.php' ?>
+<?php 
+$pagetitle = "Winkelwagen";
+include './header.php' ?>
 <div id="wagen">
     <div id="wwtxt">Winkelwagen</div>
     <div id="date">

@@ -1,9 +1,13 @@
-<?php include './header.php' ?>
+<?php 
+$pagetitle = "Accesoires";
+include './header.php';
+?>
+
 <div class="mainpage">
     <div class="mainpagelinks">
         <p><a href="/index.php">Home</a> > <a href="/index.php">Shop</a> > Accesoires</p>
     </div>
-    <form action="" method="get" class="sidebar">
+    <form method="get" class="sidebar">
         <div class="filters"> <!--filters voor de kleur, je kan er op klikken verder niet functioneel-->
             <p style="border-bottom: 1px solid black; font-size: 18px;">Kleur</p>
             <p><input type="checkbox" name="kleur[]" value="blauw">Blauw</p>

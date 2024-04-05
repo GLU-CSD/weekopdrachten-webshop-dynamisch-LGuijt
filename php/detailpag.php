@@ -1,4 +1,6 @@
-<?php include './header.php' ?>
+<?php
+$pagetitle = "Product";
+include './header.php'; ?>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -49,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                             <?php foreach ($file as $z) {
                                 if ($e == $z["code"]) {
                                     ?>
-                                    <div class="extraimg"><a href="./detailpag.php?sku=<?= $z["code"] ?>" target="_blank"><img src="<?= $z["img"] ?>"></a></div>
+                                    <div class="extraimg"><a href="./detailpag.php?sku=<?= $z["code"] ?>" target="_blank"><img
+                                                src="<?= $z["img"] ?>"></a></div>
                                     <div class="extratitle">
                                         <?= $z["category"] . ' - ' . $z["name"] ?>
                                     </div>
